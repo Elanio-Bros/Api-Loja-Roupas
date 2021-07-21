@@ -19,9 +19,9 @@ class CreateTableProdutos extends Migration
             $table->string('nome');
             $table->decimal('preço');
             $table->string('confecção');
-            $table->timestamp('cadastrado_em');
             $table->string('tamanho', 3);
             $table->integer('quantidade_Produtos');
+            $table->timestamp('cadastrado_em');
         });
     }
 
