@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UsarioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-Route::get('/log', function () {
-    return "Ola";
-})->name('log');
+Route::middleware('auth:api')->get('/user',[UsarioController::class,'getUsuarioToken']);
+Route::get('/usuarios',[UsarioController::class,'getAllUsuarios'])->name('usuarios');
+Route::get('/usuariosToken',[UsarioController::class,'getUsuarioToken'])->name('Tokenusuario');
+

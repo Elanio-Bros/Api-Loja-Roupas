@@ -43,8 +43,8 @@ return [
 
         'api' => [
             'driver' => 'token',
-            'provider' => 'users',
-            'hash' => false,
+            'provider' => App\Models\Usuarios::class,
+            'hash' => true,
         ],
     ],
 

@@ -14,6 +14,7 @@ class Produtos extends Model
     public $timestamps = false;
 
     protected $fillable = [
+        'codigo_produto',
         'categoria',
         'nome',
         'preço',
@@ -24,11 +25,15 @@ class Produtos extends Model
     ];
 
     protected $hidden = [
-        'codigo_produto',
         'cadastrado_em',
     ];
 
     protected $casts = [
         'cadastrado_em' => 'datetime',
     ];
+
+    public function imagens()
+    {
+        return $this->hasMany(Imagens::class, 'ref_codigo_produto', 'codigo_produto');
+    }
 }

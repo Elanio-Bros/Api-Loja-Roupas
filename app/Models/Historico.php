@@ -11,18 +11,17 @@ class Historico extends Model
 
     protected $table = 'historico';
 
+    public $timestamps = false;
+
     protected $fillable = [
-        'categoria',
-        'nome',
-        'preço',
-        'confecção',
-        'tamanho',
-        'quantidade'
+        'criado_por',
+        'ref_codigo_produto',
+        'modificação',
+        'quantidade',
 
     ];
 
     protected $hidden = [
-        'codigo_produto',
         'cadastrado_em',
     ];
 
@@ -30,5 +29,13 @@ class Historico extends Model
         'cadastrado_em' => 'datetime',
     ];
 
-    
+    public function usuario()
+    {
+        return $this->hasMany(Usuarios::class, 'id_usuario', 'criado_por');
+    }
+
+    public function produto()
+    {
+        return $this->hasMany(Produtos::class, 'codigo_produto', 'ref_codigo_produto');
+    }
 }

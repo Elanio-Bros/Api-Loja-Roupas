@@ -23,7 +23,7 @@ class ProdutosFactory extends Factory
     {
         $categoria = $this->faker->randomElement([
             'Camisetas', 'Blusinhas', 'Camisas',
-            'Suéteres', 'Cardigans', 'Blazer', 'Jaquetas', 'casacos',
+            'Suéteres', 'Cardigans', 'Blazer', 'Jaquetas', 'Casacos',
             'Coletes', 'Quimonos', 'Regatas'
         ]);
         $cofeccao = $this->faker->randomElement([
@@ -34,10 +34,10 @@ class ProdutosFactory extends Factory
         return [
             'categoria' => $categoria,
             'nome' => $nomeProduto,
-            'preço' => $this->faker->bothify('##.##'),
+            'preço' => $this->faker->numerify('##.##'),
             'confecção' => $cofeccao,
             'tamanho' =>  $this->faker->randomElement(['P', 'M', 'G', 'GG']),
-            'quantidade_produtos' => $this->faker->bothify('##'),
+            'quantidade_produtos' => $this->faker->numerify('##'),
         ];
     }
 }

@@ -19,9 +19,8 @@ class Authenticate extends Middleware
         // }
         // echo json_encode($request->get('token'));
 
-        if (!$request->expectsJson()) {
-            echo 'erro';
-            // return route('log');
-        }
+        // if (!$request->expectsJson()) {
+        //     return route('log');
+        // }
     }
 }

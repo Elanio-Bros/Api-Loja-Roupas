@@ -1,7 +1,7 @@
 {
     "name": "laravel/laravel",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Esse Projeto é um teste feito pela a empresa Vesit para testa a qualificação",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {

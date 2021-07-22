@@ -11,17 +11,18 @@ class Imagens extends Model
 
     protected $table = 'imagens';
 
+    public $timestamps = false;
+
     protected $fillable = [
+        'ref_codigo_produto',
         'path_imagem',
     ];
 
     protected $hidden = [
-        'id',
-        'codigo_produto',
         'cadastrado_em',
     ];
 
     protected $casts = [
-        'cadastrado_em'=>'datetime',
+        'cadastrado_em' => 'datetime',
     ];
 }
