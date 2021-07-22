@@ -11,27 +11,24 @@ class Produtos extends Model
 
     protected $table = 'produtos';
 
+    public $timestamps = false;
+
     protected $fillable = [
         'categoria',
         'nome',
         'preço',
         'confecção',
         'tamanho',
-        'quantidade'
+        'quantidade_produtos'
 
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
         'codigo_produto',
         'cadastrado_em',
     ];
 
     protected $casts = [
-        'cadastrado_em'=>'datetime',
+        'cadastrado_em' => 'datetime',
     ];
 }

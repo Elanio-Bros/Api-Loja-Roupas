@@ -19,4 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::get('/log', function () {
     return "Ola";
-});
+})->name('log');

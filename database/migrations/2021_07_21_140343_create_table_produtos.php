@@ -20,7 +20,7 @@ class CreateTableProdutos extends Migration
             $table->decimal('preço');
             $table->string('confecção');
             $table->string('tamanho', 3);
-            $table->integer('quantidade_Produtos');
+            $table->integer('quantidade_produtos');
             $table->timestamp('cadastrado_em');
         });
     }

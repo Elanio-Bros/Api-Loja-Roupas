@@ -2,30 +2,29 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 
-class Usarios extends Authenticatable
+class Usuarios extends Model
 {
-    use HasFactory, Notifiable;
+    use HasFactory;
 
-    protected $table='usuarios';
+    protected $table = 'usuarios';
+    public $timestamps=false;
 
     protected $fillable = [
-        'name',
+        'nome',
         'email',
-        'password',
-        'token',
+        'senha',
+        'api_token',
     ];
 
     protected $hidden = [
-        'password',
-        'token',
+        'senha',
+        'api_token',
     ];
 
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'data_token' => 'datetime',
     ];
 }
