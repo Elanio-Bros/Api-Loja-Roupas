@@ -17,7 +17,8 @@ class CheckTokinApi
      */
     public function handle(Request $request, Closure $next)
     {
-        $token = $request->input('token');
+        $token = $request->header('token');
+        
         if (!$token || !Usuarios::where('api_token', $token)->exists()) {
             return response()->json('Invalid Token', 401);
         }

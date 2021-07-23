@@ -10,6 +10,7 @@ class Usuarios extends Model
     use HasFactory;
 
     protected $table = 'usuarios';
+    protected $primaryKey = 'id_usuario';
     public $timestamps = false;
 
     protected $fillable = [
@@ -23,7 +24,6 @@ class Usuarios extends Model
     protected $hidden = [
         'senha',
         'permissão',
-        'api_token',
     ];
 
     protected $casts = [

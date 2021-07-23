@@ -17,8 +17,8 @@ class AdminCheck
      */
     public function handle(Request $request, Closure $next)
     {
-        $token = $request->input('token');
-         if (Usuarios::where('api_token', $token)->first()->permissão != 1) {
+        $token = $request->header('token');
+        if (Usuarios::where('api_token', $token)->first()->permissão != 1) {
             return response()->json('Erro usuario não autorizado', 401);
         }
         return $next($request);

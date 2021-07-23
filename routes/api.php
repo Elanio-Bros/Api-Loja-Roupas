@@ -3,6 +3,7 @@
 use App\Http\Controllers\UsarioController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Http\Request;
+use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +19,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('checkToken')->group(function () {
     Route::get('/usuarios', [UsuarioController::class, 'getAllUsuarios']);
-    Route::delete('/deleteUsuario', [UsuarioController::class, 'deleteUsuarioEmail'])->middleware('is_admin');
-    Route::delete('/deleteUsuario/{id}', [UsuarioController::class, 'deleteUsuarioId'])->middleware('is_admin');
+    Route::middleware('is_admin')->group(function () {
+        Route::delete('/deleteUsuario', [UsuarioController::class, 'deleteUsuarioEmail']);
+        Route::delete('/deleteUsuario/{id}', [UsuarioController::class, 'deleteUsuarioId']);
+        Route::put('/usario/{idUser}', [UsuarioController::class,'updatePutUser']);
+    });
 });
 Route::get('/usuarioToken', [UsuarioController::class, 'getUsuarioToken']);
 Route::post('/criarUsuario', [UsuarioController::class, 'postCreateUsuario']);
