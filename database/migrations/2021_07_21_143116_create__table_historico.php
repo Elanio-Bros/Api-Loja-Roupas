@@ -15,8 +15,8 @@ class CreateTableHistorico extends Migration
     {
         Schema::create('historico', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('criado_por')->references('id_usuario')->on('usuarios');
-            $table->foreignId('ref_codigo_produto')->references('codigo_produto')->on('produtos');
+            $table->foreignId('criado_por')->references('id_usuario')->on('usuarios')->cascadeOnDelete();
+            $table->foreignId('ref_codigo_produto')->references('codigo_produto')->on('produtos')->cascadeOnDelete();
             $table->string('modificação');
             $table->integer('quantidade');
             $table->timestamp('cadastrado_em');

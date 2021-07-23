@@ -10,17 +10,19 @@ class Usuarios extends Model
     use HasFactory;
 
     protected $table = 'usuarios';
-    public $timestamps=false;
+    public $timestamps = false;
 
     protected $fillable = [
         'nome',
         'email',
         'senha',
+        'permissão',
         'api_token',
     ];
 
     protected $hidden = [
         'senha',
+        'permissão',
         'api_token',
     ];
 

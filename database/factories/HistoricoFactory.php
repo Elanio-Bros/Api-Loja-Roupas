@@ -37,7 +37,7 @@ class HistoricoFactory extends Factory
             'ref_codigo_produto' => function () {
                 $produtos = Produtos::all();
                 if ($produtos->count() === 0) {
-                    return Usuarios::factory()->create()->id;
+                    return Produtos::factory()->create()->id;
                 } else {
                     return $this->faker->randomElement($produtos)->codigo_produto;
                 }

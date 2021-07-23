@@ -37,7 +37,7 @@ class ImagensFactory extends Factory
                     }
                 }
             },
-            // storage/image
+            // storage/imag
             'path_imagem' => 'img.jpg',
         ];
     }

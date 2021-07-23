@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UsarioController;
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user',[UsarioController::class,'getUsuarioToken']);
-Route::get('/usuarios',[UsarioController::class,'getAllUsuarios'])->name('usuarios');
-Route::get('/usuariosToken',[UsarioController::class,'getUsuarioToken'])->name('Tokenusuario');
-
+Route::middleware('checkToken')->group(function () {
+    Route::get('/usuarios', [UsuarioController::class, 'getAllUsuarios']);
+    Route::delete('/deleteUsuario', [UsuarioController::class, 'deleteUsuarioEmail'])->middleware('is_admin');
+    Route::delete('/deleteUsuario/{id}', [UsuarioController::class, 'deleteUsuarioId'])->middleware('is_admin');
+});
+Route::get('/usuarioToken', [UsuarioController::class, 'getUsuarioToken']);
+Route::post('/criarUsuario', [UsuarioController::class, 'postCreateUsuario']);

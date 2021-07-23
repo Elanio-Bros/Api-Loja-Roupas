@@ -15,7 +15,7 @@ class CreateTableImagens extends Migration
     {
         Schema::create('imagens', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('ref_codigo_produto')->references('codigo_produto')->on('produtos');
+            $table->foreignId('ref_codigo_produto')->references('codigo_produto')->on('produtos')->cascadeOnDelete();
             $table->string('path_imagem');
             $table->timestamp('cadastrado_em');
 

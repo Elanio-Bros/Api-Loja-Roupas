@@ -18,7 +18,8 @@ class CreateTableUsuarios extends Migration
             $table->string('nome');
             $table->string('email')->unique();
             $table->string('senha');
-            $table->string('api_token',50);
+            $table->integer('permissão');
+            $table->string('api_token', 30);
             $table->timestamp('data_token');
         });
     }
