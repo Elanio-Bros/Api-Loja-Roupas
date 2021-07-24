@@ -18,6 +18,8 @@ Depois digite os commandos:
 
 &nbsp;
 ##Lógica
+
+&nbsp;
 A Api ela tem como funcionalidade criar Usuarios e Produtos, adicionar fotos e relatar no historico as entradas e saidas de produtos.
 Além de também de mostrar os produtos e os links das fotos cadastrados o historico geral e especifico de cada produto e a lista de usuários
 
