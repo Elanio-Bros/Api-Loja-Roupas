@@ -1,5 +1,5 @@
 # Api-Rest-Vesti
-Primeiro Configure o arquivo crie um arquivo .env os requisitos [`exemplo do arquivo env`](https://github.com/Elanio-Bros/Api-Rest-Vesti/blob/main/.env.example)
+Primeiro crie um arquivo .env os requisitos [`exemplo do arquivo env`](https://github.com/Elanio-Bros/Api-Rest-Vesti/blob/main/.env.example)
 1. DB_HOST
 2. DB_PORT
 3. DB_DATABASE
@@ -15,4 +15,11 @@ Depois digite os commandos
 4. `php artisan serve` para iniciar o servidor e mostrar a documentação da API
 
 &nbsp;
-**Toda Utilizaçãod o Token deve ser pasado pelo o Header da requisição**
+##Lógica
+A Api ela tem como funcionalidade criar Usuarios e Produtos, adicionar fotos e relatar no historico as entradas e saidas de produtos.
+Além de também de mostrar os produtos e os links das fotos cadastrados o historico geral e especifico de cada produto e a lista de usuários
+
+
+&nbsp;
+**Toda utilização do Token deve ser pasado pelo o Header da requisições (GET,POST,PUT,PATCH,DELETE)**
+
