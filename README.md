@@ -17,7 +17,7 @@ Depois digite os commandos:
 4. `php artisan serve` para iniciar o servidor
 
 &nbsp;
-A pagina home do servidor tem a documentação da API
+A pagina home do servidor tem a documentação básica da API 
 
 &nbsp;
 ## Lógica
