@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "74e79e3c-e648-4bc2-9b1b-ebe8118bea21",
+        "_postman_id": "64bac2c2-d677-4598-a4b9-6bf72e9e9741",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -120,15 +120,15 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "54"
+                                    "value": "56"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
-                            "code": 422,
-                            "body": "{\"message\":\"The given data was invalid.\",\"errors\":{\"email\":[\"The email field is required.\"],\"senha\":[\"The senha field is required.\"]}}",
+                            "code": 200,
+                            "body": "{\"senha\":[\"Faltando campo senha\"],\"email\":[\"Faltando campo email\"]}",
                             "name": null
                         }
                     ]
@@ -156,7 +156,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"occaecati\",\"senha\":\"quibusdam\",\"email\":\"jaskolski.jaclyn@example.org\"}"
+                            "raw": "{\"nome\":\"et\",\"senha\":\"mollitia\",\"email\":\"karli.tremblay@example.com\"}"
                         },
                         "description": "",
                         "auth": {
@@ -207,7 +207,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ea",
+                                    "value": "qui",
                                     "description": "The ID of the delete."
                                 }
                             ]
@@ -244,7 +244,7 @@
                                 {
                                     "id": "idUser",
                                     "key": "idUser",
-                                    "value": "inventore",
+                                    "value": "adipisci",
                                     "description": ""
                                 }
                             ]
@@ -260,7 +260,10 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nome\":\"quia\",\"senha\":\"similique\",\"email\":\"johanna50@example.org\"}"
+                        },
                         "description": "",
                         "auth": {
                             "type": "noauth"
@@ -281,7 +284,7 @@
                                 {
                                     "id": "idUser",
                                     "key": "idUser",
-                                    "value": "voluptatem",
+                                    "value": "ut",
                                     "description": ""
                                 }
                             ]
@@ -363,120 +366,6 @@
                     ]
                 },
                 {
-                    "name": "api\/historico\/all",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/historico\/all",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/historico\/all"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "57"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "\"Invalid Token\"",
-                            "name": null
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/produtos\/all",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/produtos\/all",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/produtos\/all"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "56"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "\"Invalid Token\"",
-                            "name": null
-                        }
-                    ]
-                },
-                {
                     "name": "api\/produtos",
                     "request": {
                         "url": {
@@ -520,7 +409,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "55"
+                                    "value": "57"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -575,7 +464,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "voluptatem",
+                                    "value": "sint",
                                     "description": ""
                                 }
                             ]
@@ -612,7 +501,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "pariatur",
+                                    "value": "occaecati",
                                     "description": ""
                                 }
                             ]
@@ -649,13 +538,13 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "atque",
+                                    "value": "corrupti",
                                     "description": ""
                                 },
                                 {
                                     "id": "idImagem",
                                     "key": "idImagem",
-                                    "value": "est",
+                                    "value": "dolores",
                                     "description": ""
                                 }
                             ]
@@ -692,7 +581,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "doloremque",
+                                    "value": "fugiat",
                                     "description": ""
                                 }
                             ]
@@ -729,7 +618,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "optio",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -766,7 +655,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "corrupti",
+                                    "value": "non",
                                     "description": ""
                                 }
                             ]
@@ -803,7 +692,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "quaerat",
+                                    "value": "rerum",
                                     "description": ""
                                 }
                             ]
@@ -840,13 +729,13 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "et",
+                                    "value": "quis",
                                     "description": ""
                                 },
                                 {
                                     "id": "idFoto",
                                     "key": "idFoto",
-                                    "value": "qui",
+                                    "value": "voluptas",
                                     "description": ""
                                 }
                             ]

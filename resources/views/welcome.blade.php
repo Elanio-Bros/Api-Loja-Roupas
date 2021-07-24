@@ -196,7 +196,7 @@ fetch(url, {
 
             <span id="example-responses-GETapi-usuarioToken">
                 <blockquote>
-                    <p>Example response (422):</p>
+                    <p>Example response (200):</p>
                 </blockquote>
                 <details class="annotation">
                     <summary>
@@ -207,22 +207,19 @@ fetch(url, {
                     <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 54
+x-ratelimit-remaining: 56
 access-control-allow-origin: *
  </code></pre>
                 </details>
                 <pre>
 
 <code class="language-json">{
-    &quot;message&quot;: &quot;The given data was invalid.&quot;,
-    &quot;errors&quot;: {
-        &quot;email&quot;: [
-            &quot;The email field is required.&quot;
-        ],
-        &quot;senha&quot;: [
-            &quot;The senha field is required.&quot;
-        ]
-    }
+    &quot;senha&quot;: [
+        &quot;Faltando campo senha&quot;
+    ],
+    &quot;email&quot;: [
+        &quot;Faltando campo email&quot;
+    ]
 }</code>
  </pre>
             </span>
@@ -277,9 +274,9 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"nome\": \"occaecati\",
-    \"senha\": \"quibusdam\",
-    \"email\": \"jaskolski.jaclyn@example.org\"
+    \"nome\": \"et\",
+    \"senha\": \"mollitia\",
+    \"email\": \"karli.tremblay@example.com\"
 }"
 </code></pre>
 
@@ -293,9 +290,9 @@ const headers = {
 };
 
 let body = {
-    "nome": "occaecati",
-    "senha": "quibusdam",
-    "email": "jaskolski.jaclyn@example.org"
+    "nome": "et",
+    "senha": "mollitia",
+    "email": "karli.tremblay@example.com"
 }
 
 fetch(url, {
@@ -444,12 +441,12 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/Usuario/delete/ea" \
+    "http://localhost/api/Usuario/delete/qui" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/Usuario/delete/ea"
+    "http://localhost/api/Usuario/delete/qui"
 );
 
 const headers = {
@@ -521,12 +518,18 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/usuarios/inventore" \
+    "http://localhost/api/usuarios/adipisci" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre>
+    --header "Accept: application/json" \
+    --data "{
+    \"nome\": \"quia\",
+    \"senha\": \"similique\",
+    \"email\": \"johanna50@example.org\"
+}"
+</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/usuarios/inventore"
+    "http://localhost/api/usuarios/adipisci"
 );
 
 const headers = {
@@ -534,9 +537,16 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "nome": "quia",
+    "senha": "similique",
+    "email": "johanna50@example.org"
+}
+
 fetch(url, {
     method: "PUT",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre>
             </span>
 
@@ -583,6 +593,27 @@ fetch(url, {
                         required hidden>
                     <br>
                 </p>
+                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+                <p>
+                    <b><code>nome</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <input type="text" name="nome" data-endpoint="PUTapi-usuarios--idUser-" data-component="body"
+                        required hidden>
+                    <br>
+                </p>
+                <p>
+                    <b><code>senha</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <input type="text" name="senha" data-endpoint="PUTapi-usuarios--idUser-" data-component="body"
+                        required hidden>
+                    <br>
+                </p>
+                <p>
+                    <b><code>email</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <input type="text" name="email" data-endpoint="PUTapi-usuarios--idUser-" data-component="body"
+                        required hidden>
+                    <br>
+                <p>Must be a valid email address.</p>
+                </p>
+
             </form>
 
             <h2 id="endpoints-PATCHapi-usuarios--idUser-">PATCH api/usuarios/{idUser}</h2>
@@ -597,12 +628,12 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request PATCH \
-    "http://localhost/api/usuarios/voluptatem" \
+    "http://localhost/api/usuarios/ut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/usuarios/voluptatem"
+    "http://localhost/api/usuarios/ut"
 );
 
 const headers = {
@@ -748,182 +779,6 @@ access-control-allow-origin: *
                 </p>
             </form>
 
-            <h2 id="endpoints-GETapi-historico-all">GET api/historico/all</h2>
-
-            <p>
-            </p>
-
-
-
-            <span id="example-requests-GETapi-historico-all">
-                <blockquote>Example request:</blockquote>
-
-
-                <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/historico/all" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre>
-
-                <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/historico/all"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre>
-            </span>
-
-            <span id="example-responses-GETapi-historico-all">
-                <blockquote>
-                    <p>Example response (401):</p>
-                </blockquote>
-                <details class="annotation">
-                    <summary>
-                        <small
-                            onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show
-                            headers</small>
-                    </summary>
-                    <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 57
-access-control-allow-origin: *
- </code></pre>
-                </details>
-                <pre>
-
-<code class="language-json">&quot;Invalid Token&quot;</code>
- </pre>
-            </span>
-            <span id="execution-results-GETapi-historico-all" hidden>
-                <blockquote>Received response<span id="execution-response-status-GETapi-historico-all"></span>:
-                </blockquote>
-                <pre class="json"><code id="execution-response-content-GETapi-historico-all"></code></pre>
-            </span>
-            <span id="execution-error-GETapi-historico-all" hidden>
-                <blockquote>Request failed with error:</blockquote>
-                <pre><code id="execution-error-message-GETapi-historico-all"></code></pre>
-            </span>
-            <form id="form-GETapi-historico-all" data-method="GET" data-path="api/historico/all" data-authed="0"
-                data-hasfiles="0" data-isarraybody="0"
-                data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' autocomplete="off"
-                onsubmit="event.preventDefault(); executeTryOut('GETapi-historico-all', this);">
-                <h3>
-                    Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                        style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        id="btn-tryout-GETapi-historico-all" onclick="tryItOut('GETapi-historico-all');">Try it out ⚡
-                    </button>
-                    <button type="button"
-                        style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        id="btn-canceltryout-GETapi-historico-all" onclick="cancelTryOut('GETapi-historico-all');"
-                        hidden>Cancel
-                    </button>&nbsp;&nbsp;
-                    <button type="submit"
-                        style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        id="btn-executetryout-GETapi-historico-all" hidden>Send Request 💥
-                    </button>
-                </h3>
-                <p>
-                    <small class="badge badge-green">GET</small>
-                    <b><code>api/historico/all</code></b>
-                </p>
-            </form>
-
-            <h2 id="endpoints-GETapi-produtos-all">GET api/produtos/all</h2>
-
-            <p>
-            </p>
-
-
-
-            <span id="example-requests-GETapi-produtos-all">
-                <blockquote>Example request:</blockquote>
-
-
-                <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/produtos/all" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre>
-
-                <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/produtos/all"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre>
-            </span>
-
-            <span id="example-responses-GETapi-produtos-all">
-                <blockquote>
-                    <p>Example response (401):</p>
-                </blockquote>
-                <details class="annotation">
-                    <summary>
-                        <small
-                            onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show
-                            headers</small>
-                    </summary>
-                    <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 56
-access-control-allow-origin: *
- </code></pre>
-                </details>
-                <pre>
-
-<code class="language-json">&quot;Invalid Token&quot;</code>
- </pre>
-            </span>
-            <span id="execution-results-GETapi-produtos-all" hidden>
-                <blockquote>Received response<span id="execution-response-status-GETapi-produtos-all"></span>:
-                </blockquote>
-                <pre class="json"><code id="execution-response-content-GETapi-produtos-all"></code></pre>
-            </span>
-            <span id="execution-error-GETapi-produtos-all" hidden>
-                <blockquote>Request failed with error:</blockquote>
-                <pre><code id="execution-error-message-GETapi-produtos-all"></code></pre>
-            </span>
-            <form id="form-GETapi-produtos-all" data-method="GET" data-path="api/produtos/all" data-authed="0"
-                data-hasfiles="0" data-isarraybody="0"
-                data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' autocomplete="off"
-                onsubmit="event.preventDefault(); executeTryOut('GETapi-produtos-all', this);">
-                <h3>
-                    Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                        style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        id="btn-tryout-GETapi-produtos-all" onclick="tryItOut('GETapi-produtos-all');">Try it out ⚡
-                    </button>
-                    <button type="button"
-                        style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        id="btn-canceltryout-GETapi-produtos-all" onclick="cancelTryOut('GETapi-produtos-all');"
-                        hidden>Cancel
-                    </button>&nbsp;&nbsp;
-                    <button type="submit"
-                        style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        id="btn-executetryout-GETapi-produtos-all" hidden>Send Request 💥
-                    </button>
-                </h3>
-                <p>
-                    <small class="badge badge-green">GET</small>
-                    <b><code>api/produtos/all</code></b>
-                </p>
-            </form>
-
             <h2 id="endpoints-GETapi-produtos">GET api/produtos</h2>
 
             <p>
@@ -968,7 +823,7 @@ fetch(url, {
                     <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 55
+x-ratelimit-remaining: 57
 access-control-allow-origin: *
  </code></pre>
                 </details>
@@ -1091,12 +946,12 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/fotos/upload/voluptatem" \
+    "http://localhost/api/fotos/upload/sint" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/fotos/upload/voluptatem"
+    "http://localhost/api/fotos/upload/sint"
 );
 
 const headers = {
@@ -1168,12 +1023,12 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/fotos/update/all/pariatur" \
+    "http://localhost/api/fotos/update/all/occaecati" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/fotos/update/all/pariatur"
+    "http://localhost/api/fotos/update/all/occaecati"
 );
 
 const headers = {
@@ -1247,12 +1102,12 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/fotos/update/atque/est" \
+    "http://localhost/api/fotos/update/corrupti/dolores" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/fotos/update/atque/est"
+    "http://localhost/api/fotos/update/corrupti/dolores"
 );
 
 const headers = {
@@ -1332,12 +1187,12 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/produtos/doloremque" \
+    "http://localhost/api/produtos/fugiat" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/produtos/doloremque"
+    "http://localhost/api/produtos/fugiat"
 );
 
 const headers = {
@@ -1408,12 +1263,12 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request PATCH \
-    "http://localhost/api/produtos/optio" \
+    "http://localhost/api/produtos/et" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/produtos/optio"
+    "http://localhost/api/produtos/et"
 );
 
 const headers = {
@@ -1484,12 +1339,12 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/produtos/delete/corrupti" \
+    "http://localhost/api/produtos/delete/non" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/produtos/delete/corrupti"
+    "http://localhost/api/produtos/delete/non"
 );
 
 const headers = {
@@ -1562,12 +1417,12 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/foto/delete/all/quaerat" \
+    "http://localhost/api/foto/delete/all/rerum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/foto/delete/all/quaerat"
+    "http://localhost/api/foto/delete/all/rerum"
 );
 
 const headers = {
@@ -1641,12 +1496,12 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/foto/delete/et/qui" \
+    "http://localhost/api/foto/delete/quis/voluptas" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/foto/delete/et/qui"
+    "http://localhost/api/foto/delete/quis/voluptas"
 );
 
 const headers = {

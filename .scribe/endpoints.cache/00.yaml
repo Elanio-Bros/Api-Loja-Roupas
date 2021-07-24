@@ -45,13 +45,13 @@ endpoints:
     bodyParameters: []
     responses:
       -
-        status: 422
-        content: '{"message":"The given data was invalid.","errors":{"email":["The email field is required."],"senha":["The senha field is required."]}}'
+        status: 200
+        content: '{"senha":["Faltando campo senha"],"email":["Faltando campo email"]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '54'
+          x-ratelimit-remaining: '56'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -73,19 +73,19 @@ endpoints:
         name: nome
         description: ''
         required: true
-        example: occaecati
+        example: et
         type: string
       senha:
         name: senha
         description: ''
         required: true
-        example: quibusdam
+        example: mollitia
         type: string
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: jaskolski.jaclyn@example.org
+        example: karli.tremblay@example.com
         type: string
     responses: []
     responseFields: []
@@ -121,7 +121,7 @@ endpoints:
         name: id
         description: 'The ID of the delete.'
         required: true
-        example: ea
+        example: qui
         type: string
     queryParameters: []
     bodyParameters: []
@@ -143,10 +143,28 @@ endpoints:
         name: idUser
         description: ''
         required: true
-        example: inventore
+        example: adipisci
         type: string
     queryParameters: []
-    bodyParameters: []
+    bodyParameters:
+      nome:
+        name: nome
+        description: ''
+        required: true
+        example: quia
+        type: string
+      senha:
+        name: senha
+        description: ''
+        required: true
+        example: similique
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: johanna50@example.org
+        type: string
     responses: []
     responseFields: []
   -
@@ -165,7 +183,7 @@ endpoints:
         name: idUser
         description: ''
         required: true
-        example: voluptatem
+        example: ut
         type: string
     queryParameters: []
     bodyParameters: []
@@ -200,58 +218,6 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/historico/all
-    metadata:
-      title: ''
-      description: ''
-      authenticated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 401
-        content: '"Invalid Token"'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '57'
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: api/produtos/all
-    metadata:
-      title: ''
-      description: ''
-      authenticated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 401
-        content: '"Invalid Token"'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '56'
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
     uri: api/produtos
     metadata:
       title: ''
@@ -271,7 +237,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '55'
+          x-ratelimit-remaining: '57'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -307,7 +273,7 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: voluptatem
+        example: sint
         type: string
     queryParameters: []
     bodyParameters: []
@@ -329,7 +295,7 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: pariatur
+        example: occaecati
         type: string
     queryParameters: []
     bodyParameters: []
@@ -351,13 +317,13 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: atque
+        example: corrupti
         type: string
       idImagem:
         name: idImagem
         description: ''
         required: true
-        example: est
+        example: dolores
         type: string
     queryParameters: []
     bodyParameters: []
@@ -379,7 +345,7 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: doloremque
+        example: fugiat
         type: string
     queryParameters: []
     bodyParameters: []
@@ -401,7 +367,7 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: optio
+        example: et
         type: string
     queryParameters: []
     bodyParameters: []
@@ -423,7 +389,7 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: corrupti
+        example: non
         type: string
     queryParameters: []
     bodyParameters: []
@@ -445,7 +411,7 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: quaerat
+        example: rerum
         type: string
     queryParameters: []
     bodyParameters: []
@@ -467,13 +433,13 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: et
+        example: quis
         type: string
       idFoto:
         name: idFoto
         description: ''
         required: true
-        example: qui
+        example: voluptas
         type: string
     queryParameters: []
     bodyParameters: []

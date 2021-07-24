@@ -57,30 +57,30 @@ paths:
           schema:
             type: string
       responses:
-        422:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'The given data was invalid.'
-                  errors:
-                    email:
-                      - 'The email field is required.'
-                    senha:
-                      - 'The senha field is required.'
+                  senha:
+                    - 'Faltando campo senha'
+                  email:
+                    - 'Faltando campo email'
                 properties:
-                  message:
-                    type: string
-                    example: 'The given data was invalid.'
-                  errors:
-                    type: object
+                  senha:
+                    type: array
                     example:
-                      email:
-                        - 'The email field is required.'
-                      senha:
-                        - 'The senha field is required.'
+                      - 'Faltando campo senha'
+                    items:
+                      type: string
+                  email:
+                    type: array
+                    example:
+                      - 'Faltando campo email'
+                    items:
+                      type: string
       tags:
         - Endpoints
       security: []
@@ -116,15 +116,15 @@ paths:
                 nome:
                   type: string
                   description: ''
-                  example: occaecati
+                  example: et
                 senha:
                   type: string
                   description: ''
-                  example: quibusdam
+                  example: mollitia
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: jaskolski.jaclyn@example.org
+                  example: karli.tremblay@example.com
               required:
                 - nome
                 - senha
@@ -181,7 +181,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the delete.'
-        example: ea
+        example: qui
         required: true
         schema:
           type: string
@@ -207,6 +207,29 @@ paths:
       responses: {  }
       tags:
         - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                  description: ''
+                  example: quia
+                senha:
+                  type: string
+                  description: ''
+                  example: similique
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: johanna50@example.org
+              required:
+                - nome
+                - senha
+                - email
       security: []
     patch:
       summary: ''
@@ -235,71 +258,11 @@ paths:
         in: path
         name: idUser
         description: ''
-        example: inventore
+        example: adipisci
         required: true
         schema:
           type: string
   /api/historico:
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: string
-                example: 'Invalid Token'
-      tags:
-        - Endpoints
-      security: []
-  /api/historico/all:
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: string
-                example: 'Invalid Token'
-      tags:
-        - Endpoints
-      security: []
-  /api/produtos/all:
     get:
       summary: ''
       description: ''
@@ -410,7 +373,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: voluptatem
+        example: sint
         required: true
         schema:
           type: string
@@ -442,7 +405,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: pariatur
+        example: occaecati
         required: true
         schema:
           type: string
@@ -474,7 +437,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: atque
+        example: corrupti
         required: true
         schema:
           type: string
@@ -482,7 +445,7 @@ paths:
         in: path
         name: idImagem
         description: ''
-        example: est
+        example: dolores
         required: true
         schema:
           type: string
@@ -536,7 +499,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: doloremque
+        example: fugiat
         required: true
         schema:
           type: string
@@ -568,7 +531,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: corrupti
+        example: non
         required: true
         schema:
           type: string
@@ -600,7 +563,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: quaerat
+        example: rerum
         required: true
         schema:
           type: string
@@ -632,7 +595,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: et
+        example: quis
         required: true
         schema:
           type: string
@@ -640,7 +603,7 @@ paths:
         in: path
         name: idFoto
         description: ''
-        example: qui
+        example: voluptas
         required: true
         schema:
           type: string
