@@ -1,5 +1,5 @@
 # Api-Rest-Vesti
-Primeiro crie um arquivo .env os requisitos [`exemplo do arquivo env`](https://github.com/Elanio-Bros/Api-Rest-Vesti/blob/main/.env.example)
+Primeiro crie um arquivo .env [`exemplo do arquivo env`](https://github.com/Elanio-Bros/Api-Rest-Vesti/blob/main/.env.example) os requisitos para mudança são:
 1. DB_HOST
 2. DB_PORT
 3. DB_DATABASE
@@ -8,7 +8,7 @@ Primeiro crie um arquivo .env os requisitos [`exemplo do arquivo env`](https://g
 Esse requisitos são importantes pra a configuração do **Banco De Dados**
 
 &nbsp;
-Depois digite os commandos
+Depois digite os commandos:
 1. `composer install` para instalar as dependecias
 2. `php artisan key:generate` para gerar uma chave.
 3. `php artisan migrate` para criar todas as migrações no banco de dados
