@@ -20,17 +20,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('checkToken')->group(function () {
-    Route::get('/usuarios', [UsuarioController::class, 'getAllUsuarios']);
     Route::middleware('is_admin')->group(function () {
-        Route::delete('/deleteUsuario', [UsuarioController::class, 'deleteUsuarioEmail']);
-        Route::delete('/deleteUsuario/{id}', [UsuarioController::class, 'deleteUsuarioId']);
-        Route::put('/usario/{idUser}', [UsuarioController::class, 'updatePutUser']);
-        Route::patch('/usario/{idUser}', [UsuarioController::class, 'updatePatchUser']);
+        Route::delete('/Usuario/delete', [UsuarioController::class, 'deleteUsuarioEmail']);
+        Route::delete('/Usuario/delete/{id}', [UsuarioController::class, 'deleteUsuarioId']);
+        Route::put('/usuarios/{idUser}', [UsuarioController::class, 'updatePutUser']);
+        Route::patch('/usuarios/{idUser}', [UsuarioController::class, 'updatePatchUser']);
+        Route::get('/usuarios', [UsuarioController::class, 'getAllUsuarios']);
     });
-    //  Route::post('/imagem',[ProdutosControlle::class,'UploadImagens']);
     Route::middleware('is_modified')->group(function () {
-        Route::post('/Createproduto', [ProdutosControlle::class, 'createProduto']);
-        Route::put('/UpdateFotos/{idProduto}', [ProdutosControlle::class, 'createProduto']);
+        Route::get('/historico', [ProdutosControlle::class, 'getIdProdutoHistorico']);
+        Route::get('/historico', [ProdutosControlle::class, 'getAllHistorico']);
+        Route::post('/produto/create', [ProdutosControlle::class, 'createProduto']);
+        Route::post('/fotos/upload/{idProduto}', [ProdutosControlle::class, 'uploadFotos']);
+        Route::post('/fotos/update/all/{idProduto}', [ProdutosControlle::class, 'UpdateAllImagens']);
+        Route::post('/fotos/update/{idProduto}/{idImagem}', [ProdutosControlle::class, 'UpdateImagem']);
+        Route::put('/produtos/{idProduto}', [ProdutosControlle::class, 'updatePutProdutos']);
+        Route::patch('/produtos/{idProduto}', [ProdutosControlle::class, 'updatePatchProdutos']);
+        Route::delete('/produtos/delete/{idProduto}', [ProdutosControlle::class, 'deleteProduto']);
+        Route::delete('/foto/delete/all/{idProduto}', [ProdutosControlle::class, 'deleteAllImagem']);
+        Route::delete('/foto/delete/{idProduto}/{idFoto}', [ProdutosControlle::class, 'deleteImagem']);
     });
 });
 Route::get('/usuarioToken', [UsuarioController::class, 'getUsuarioToken']);

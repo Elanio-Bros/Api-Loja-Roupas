@@ -5,19 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Usuarios;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Str;
-use PhpParser\Node\Expr\FuncCall;
+use Illuminate\Support\Facades\Validator;
 
 class UsuarioController extends Controller
 {
 
-    function getAllUsuarios()
+    public function getAllUsuarios()
     {
         $usuarios = Usuarios::all();
         return response()->json($usuarios);
     }
 
-    function getUsuarioToken(Request $request)
+    public function getUsuarioToken(Request $request)
     {
         $this->validate($request, [
             'email' => 'required|email',
@@ -35,13 +36,20 @@ class UsuarioController extends Controller
         }
     }
 
-    function postCreateUsuario(Request $request)
+    public function postCreateUsuario(Request $request)
     {
-        $this->validate($request, [
+        $validator = Validator::make($request->all(), [
             'nome' => 'required|string',
             'senha' => 'required|string',
             'email' => 'required|email',
+        ], [
+            'email.required' => 'Faltando campo email',
         ]);
+
+        if ($validator->fails()) {
+            $errors = $validator->errors();
+            return response($errors->toJson(), 200);
+        }
         if (!Usuarios::where('email', $request->input('email'))->exists()) {
             $dateUsario = $request->only(['nome', 'email']);
             $dateUsario['senha'] = Hash::make($request->input('senha'));
@@ -55,21 +63,21 @@ class UsuarioController extends Controller
         }
     }
 
-    function deleteUsuarioEmail(Request $request)
+    public function deleteUsuarioEmail(Request $request)
     {
         $usuario = Usuarios::where('email', $request->input('email'));
         $deleteUser = $usuario->delete();
         return response()->json($deleteUser == 1 ? 'Usuário Apagado' : 'Usuário Não Existe', $deleteUser == 1 ? 200 : 404);
     }
 
-    function deleteUsuarioId($idUsuario)
+    public function deleteUsuarioId($idUsuario)
     {
         $usuario = Usuarios::where('id_usuario', $idUsuario);
         $deleteUser = $usuario->delete();
         return response()->json($deleteUser == 1 ? 'Usuário Apagado' : 'Usuário Não Existe', $deleteUser == 1 ? 200 : 404);
     }
 
-    function updatePutUser($idUser, Request $request,)
+    public function updatePutUser($idUser, Request $request,)
     {
         $this->validate($request, [
             'nome' => 'required|string',
@@ -90,7 +98,7 @@ class UsuarioController extends Controller
         }
     }
 
-    function updatePatchUser($idUser, Request $request)
+    public function updatePatchUser($idUser, Request $request)
     {
         $usuario = Usuarios::find($idUser);
         if ($usuario) {
@@ -98,8 +106,6 @@ class UsuarioController extends Controller
                 switch (Str::lower($key)) {
                     case 'senha':
                         $usuario->$key = Hash::make($value);
-                        break;
-
                         break;
                     default:
                         $usuario->$key = $value;
