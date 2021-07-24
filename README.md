@@ -20,7 +20,7 @@ Depois digite os commandos:
 A pagina home do servidor tem a documentação da API
 
 &nbsp;
-##Lógica
+## Lógica
 
 &nbsp;
 A Api ela tem como funcionalidade criar Usuarios e Produtos, adicionar fotos e relatar no historico as entradas e saidas de produtos.
