@@ -14,7 +14,10 @@ Depois digite os commandos:
 1. `composer install` para instalar as dependecias
 2. `php artisan key:generate` para gerar uma chave.
 3. `php artisan migrate` para criar todas as migrações no banco de dados
-4. `php artisan serve` para iniciar o servidor e mostrar a documentação da API
+4. `php artisan serve` para iniciar o servidor
+
+&nbsp;
+A pagina home do servidor tem a documentação da API
 
 &nbsp;
 ##Lógica
