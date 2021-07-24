@@ -236,9 +236,30 @@ class ProdutosControlle extends Controller
         $historico = Historico::where('ref_codigo_produto', $request->codigo_produto)->get();
         return response()->json($historico, 200);
     }
-    
+
     public function getAllHistorico()
     {
         return response()->json(Historico::all(), 200);
+    }
+
+    public function getAllProdutos(Request $request)
+    {
+        if ($request->has('imagens')) {
+            return response()->json(Produtos::with('imagens')->get(), 200);
+        }
+        return response()->json(Produtos::all(), 200);
+    }
+
+    public function getProduto(Request $request)
+    {
+        $wheres = array();
+        foreach ($request->keys() as $key) {
+            echo $key;
+            array_push($wheres, [$key, '=', $request->get($key)]);
+        }
+        if ($request->has('imagens')) {
+            return response()->json(Produtos::with('imagens')->where($wheres)->get(), 200);
+        }
+        return response()->json(Produtos::where($wheres)->get(), 200);
     }
 }

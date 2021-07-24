@@ -29,7 +29,9 @@ Route::middleware('checkToken')->group(function () {
     });
     Route::middleware('is_modified')->group(function () {
         Route::get('/historico', [ProdutosControlle::class, 'getIdProdutoHistorico']);
-        Route::get('/historico', [ProdutosControlle::class, 'getAllHistorico']);
+        Route::get('/historico/all', [ProdutosControlle::class, 'getAllHistorico']);
+        Route::get('/produtos/all', [ProdutosControlle::class, 'getAllProdutos']);
+        Route::get('/produtos', [ProdutosControlle::class, 'getProduto']);
         Route::post('/produto/create', [ProdutosControlle::class, 'createProduto']);
         Route::post('/fotos/upload/{idProduto}', [ProdutosControlle::class, 'uploadFotos']);
         Route::post('/fotos/update/all/{idProduto}', [ProdutosControlle::class, 'UpdateAllImagens']);
