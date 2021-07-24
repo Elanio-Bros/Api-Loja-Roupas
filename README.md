@@ -28,5 +28,5 @@ Além de também de mostrar os produtos e os links das fotos cadastradosm o hist
 
 
 &nbsp;
-**Toda utilização do Token deve ser pasado pelo o Header da requisições (GET,POST,PUT,PATCH,DELETE)**
+**Toda utilização do Token deve ser pasado pelo o Header da requisições (GET,POST,PUT,PATCH e DELETE)**
 
