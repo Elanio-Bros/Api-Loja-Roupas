@@ -116,15 +116,15 @@ paths:
                 nome:
                   type: string
                   description: ''
-                  example: quis
+                  example: occaecati
                 senha:
                   type: string
                   description: ''
-                  example: repellat
+                  example: quibusdam
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: earl19@example.com
+                  example: jaskolski.jaclyn@example.org
               required:
                 - nome
                 - senha
@@ -181,7 +181,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the delete.'
-        example: minima
+        example: ea
         required: true
         schema:
           type: string
@@ -235,7 +235,7 @@ paths:
         in: path
         name: idUser
         description: ''
-        example: enim
+        example: inventore
         required: true
         schema:
           type: string
@@ -410,7 +410,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: non
+        example: voluptatem
         required: true
         schema:
           type: string
@@ -442,7 +442,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: voluptas
+        example: pariatur
         required: true
         schema:
           type: string
@@ -474,7 +474,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: iste
+        example: atque
         required: true
         schema:
           type: string
@@ -482,7 +482,7 @@ paths:
         in: path
         name: idImagem
         description: ''
-        example: fugiat
+        example: est
         required: true
         schema:
           type: string
@@ -536,7 +536,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: ut
+        example: doloremque
         required: true
         schema:
           type: string
@@ -568,7 +568,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: dolor
+        example: corrupti
         required: true
         schema:
           type: string
@@ -600,7 +600,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: nam
+        example: quaerat
         required: true
         schema:
           type: string
@@ -632,7 +632,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: autem
+        example: et
         required: true
         schema:
           type: string
@@ -640,7 +640,7 @@ paths:
         in: path
         name: idFoto
         description: ''
-        example: repellendus
+        example: qui
         required: true
         schema:
           type: string

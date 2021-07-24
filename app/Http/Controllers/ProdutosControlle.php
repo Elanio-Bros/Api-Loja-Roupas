@@ -252,9 +252,11 @@ class ProdutosControlle extends Controller
 
     public function getProduto(Request $request)
     {
+        $this->validate($request, [
+            'colum'
+        ]);
         $wheres = array();
         foreach ($request->keys() as $key) {
-            echo $key;
             array_push($wheres, [$key, '=', $request->get($key)]);
         }
         if ($request->has('imagens')) {

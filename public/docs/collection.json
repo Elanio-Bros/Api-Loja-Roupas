@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "bcaaeed2-71f6-4635-ab1a-99d38f72c6db",
+        "_postman_id": "74e79e3c-e648-4bc2-9b1b-ebe8118bea21",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -156,7 +156,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"quis\",\"senha\":\"repellat\",\"email\":\"earl19@example.com\"}"
+                            "raw": "{\"nome\":\"occaecati\",\"senha\":\"quibusdam\",\"email\":\"jaskolski.jaclyn@example.org\"}"
                         },
                         "description": "",
                         "auth": {
@@ -207,7 +207,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "minima",
+                                    "value": "ea",
                                     "description": "The ID of the delete."
                                 }
                             ]
@@ -244,7 +244,7 @@
                                 {
                                     "id": "idUser",
                                     "key": "idUser",
-                                    "value": "enim",
+                                    "value": "inventore",
                                     "description": ""
                                 }
                             ]
@@ -281,7 +281,7 @@
                                 {
                                     "id": "idUser",
                                     "key": "idUser",
-                                    "value": "laboriosam",
+                                    "value": "voluptatem",
                                     "description": ""
                                 }
                             ]
@@ -575,7 +575,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "non",
+                                    "value": "voluptatem",
                                     "description": ""
                                 }
                             ]
@@ -612,7 +612,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "voluptas",
+                                    "value": "pariatur",
                                     "description": ""
                                 }
                             ]
@@ -649,13 +649,13 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "iste",
+                                    "value": "atque",
                                     "description": ""
                                 },
                                 {
                                     "id": "idImagem",
                                     "key": "idImagem",
-                                    "value": "fugiat",
+                                    "value": "est",
                                     "description": ""
                                 }
                             ]
@@ -692,7 +692,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "ut",
+                                    "value": "doloremque",
                                     "description": ""
                                 }
                             ]
@@ -729,7 +729,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "tempora",
+                                    "value": "optio",
                                     "description": ""
                                 }
                             ]
@@ -766,7 +766,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "dolor",
+                                    "value": "corrupti",
                                     "description": ""
                                 }
                             ]
@@ -803,7 +803,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "nam",
+                                    "value": "quaerat",
                                     "description": ""
                                 }
                             ]
@@ -840,13 +840,13 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "autem",
+                                    "value": "et",
                                     "description": ""
                                 },
                                 {
                                     "id": "idFoto",
                                     "key": "idFoto",
-                                    "value": "repellendus",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
