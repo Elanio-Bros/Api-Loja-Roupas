@@ -5,6 +5,8 @@ Primeiro crie um arquivo .env [`exemplo do arquivo env`](https://github.com/Elan
 3. DB_DATABASE
 4. DB_USERNAME
 5. DB_PASSWORD
+
+&nbsp;
 Esse requisitos são importantes pra a configuração do **Banco De Dados**
 
 &nbsp;
