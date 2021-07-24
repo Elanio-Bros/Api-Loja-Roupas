@@ -20,10 +20,19 @@ class UsuarioController extends Controller
 
     public function getUsuarioToken(Request $request)
     {
-        $this->validate($request, [
-            'email' => 'required|email',
+        $validator = Validator::make($request->all(), [
             'senha' => 'required|string',
+            'email' => 'required|email',
+        ], [
+            'email.required' => 'Faltando campo email',
+            'senha.required' => 'Faltando campo senha',
         ]);
+
+        if ($validator->fails()) {
+            $errors = $validator->errors();
+            return response($errors->toJson(), 200);
+        }
+
         $usuario = Usuarios::where('email', $request->email)->first();
         if ($usuario) {
             if (Hash::check($request->senha, $usuario->senha,)) {
@@ -44,6 +53,8 @@ class UsuarioController extends Controller
             'email' => 'required|email',
         ], [
             'email.required' => 'Faltando campo email',
+            'nome.required' => 'Faltando campo nome',
+            'senha.required' => 'Faltando campo senha',
         ]);
 
         if ($validator->fails()) {
@@ -56,8 +67,7 @@ class UsuarioController extends Controller
             $dateUsario['api_token'] = Str::random(30);
             $dateUsario['permissão'] = Usuarios::all()->count() < 1 ? 1 : 3;
             Usuarios::create($dateUsario);
-            // return response()->json("Usuário Cria token:$dateUsario['api_token']", 200);
-            return response()->json("Usuário Criado", 201);
+            return response()->json(['Usuário Criado', 'token' => $dateUsario['api_token']], 201);
         } else {
             return response()->json('Erro usuário email já cadastrado', 406);
         }
@@ -79,12 +89,19 @@ class UsuarioController extends Controller
 
     public function updatePutUser($idUser, Request $request,)
     {
-        $this->validate($request, [
+        $validator = Validator::make($request->all(), [
             'nome' => 'required|string',
             'senha' => 'required|string',
             'email' => 'required|email',
-
+        ], [
+            'email.required' => 'Faltando campo email',
+            'nome.required' => 'Faltando campo nome',
+            'senha.required' => 'Faltando campo senha',
         ]);
+        if ($validator->fails()) {
+            $errors = $validator->errors();
+            return response($errors->toJson(), 200);
+        }
         $usuario = Usuarios::find($idUser);
         if ($usuario) {
             $usuario->nome = $request->nome;

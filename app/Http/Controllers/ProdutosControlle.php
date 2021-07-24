@@ -27,7 +27,7 @@ class ProdutosControlle extends Controller
             if ($check) {
                 foreach ($request->fileName as $mediaFiles) {
                     $path = $mediaFiles->store('public/imagens');
-                    Imagens::create(["ref_codigo_produto" => $codigoProduto, 'path_imagem' => $path]);
+                    Imagens::create(['ref_codigo_produto' => $codigoProduto, 'path_imagem' => $path]);
                 }
             } else {
                 return response()->json('Tipo de arquivo invalido', 422);
@@ -51,6 +51,44 @@ class ProdutosControlle extends Controller
                 'quantidade' => $quantidade,
             ]
         );
+    }
+
+    public function getHistorico(Request $request)
+    {
+        if ($request->keys() != null) {
+            $validator = Validator::make($request->all(), [
+                'codigo_produto' => 'required|numeric',
+            ], [
+                'codigo_produto.required' => 'Faltando campo codigo_produto',
+            ]);
+            if ($validator->fails()) {
+                $errors = $validator->errors();
+                return response($errors->toJson(), 200);
+            }
+            $historico = Historico::where('ref_codigo_produto', $request->codigo_produto)->get();
+            return response()->json($historico, 200);
+        }
+        return response()->json(Historico::all(), 200);
+    }
+
+    public function getProdutos(Request $request)
+    {
+        if ($request->keys() != null) {
+            $wheres = array();
+            $requestGet = $request->except(['imagens']);
+            foreach ($requestGet as $key => $value) {
+                array_push($wheres, [$key, '=', $value]);
+            }
+            if ($request->has('imagens')) {
+                if (count($wheres) >= 1) {
+                    return response()->json(Produtos::with('imagens')->where($wheres)->get(), 200);
+                }
+                return response()->json(Produtos::with('imagens')->get(), 200);
+            }
+            return response()->json(Produtos::where($wheres)->get(), 200);
+        }
+
+        return response()->json(Produtos::all(), 200);
     }
 
     public function createProduto(Request $request)
@@ -162,7 +200,7 @@ class ProdutosControlle extends Controller
             if ($check) {
                 foreach ($request->fileName as $mediaFiles) {
                     $path = $mediaFiles->store('public/imagens');
-                    Imagens::create(["ref_codigo_produto" => $codigoProduto, 'path_imagem' => $path]);
+                    Imagens::create(['ref_codigo_produto' => $codigoProduto, 'path_imagem' => $path]);
                 }
             } else {
                 return response()->json('Tipo de arquivo invalido', 422);
@@ -221,47 +259,5 @@ class ProdutosControlle extends Controller
         $imagem = Imagens::where('ref_codigo_produto', $codigoProduto)->find($idImagem)->first();
         Storage::delete($imagem->path_imagem);
         return response()->json('Fotos produto apagadas', 200);
-    }
-    public function getIdProdutoHistorico(Request $request)
-    {
-        $validator = Validator::make($request->all(), [
-            'codigo_produto' => 'required|numeric',
-        ], [
-            'codigo_produto.required' => 'Faltando campo codigo_produto',
-        ]);
-        if ($validator->fails()) {
-            $errors = $validator->errors();
-            return response($errors->toJson(), 200);
-        }
-        $historico = Historico::where('ref_codigo_produto', $request->codigo_produto)->get();
-        return response()->json($historico, 200);
-    }
-
-    public function getAllHistorico()
-    {
-        return response()->json(Historico::all(), 200);
-    }
-
-    public function getAllProdutos(Request $request)
-    {
-        if ($request->has('imagens')) {
-            return response()->json(Produtos::with('imagens')->get(), 200);
-        }
-        return response()->json(Produtos::all(), 200);
-    }
-
-    public function getProduto(Request $request)
-    {
-        $this->validate($request, [
-            'colum'
-        ]);
-        $wheres = array();
-        foreach ($request->keys() as $key) {
-            array_push($wheres, [$key, '=', $request->get($key)]);
-        }
-        if ($request->has('imagens')) {
-            return response()->json(Produtos::with('imagens')->where($wheres)->get(), 200);
-        }
-        return response()->json(Produtos::where($wheres)->get(), 200);
     }
 }

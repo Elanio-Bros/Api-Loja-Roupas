@@ -28,10 +28,8 @@ Route::middleware('checkToken')->group(function () {
         Route::get('/usuarios', [UsuarioController::class, 'getAllUsuarios']);
     });
     Route::middleware('is_modified')->group(function () {
-        Route::get('/historico', [ProdutosControlle::class, 'getIdProdutoHistorico']);
-        Route::get('/historico/all', [ProdutosControlle::class, 'getAllHistorico']);
-        Route::get('/produtos/all', [ProdutosControlle::class, 'getAllProdutos']);
-        Route::get('/produtos', [ProdutosControlle::class, 'getProduto']);
+        Route::get('/historico', [ProdutosControlle::class, 'getHistorico']);
+        Route::get('/produtos', [ProdutosControlle::class, 'getProdutos']);
         Route::post('/produto/create', [ProdutosControlle::class, 'createProduto']);
         Route::post('/fotos/upload/{idProduto}', [ProdutosControlle::class, 'uploadFotos']);
         Route::post('/fotos/update/all/{idProduto}', [ProdutosControlle::class, 'UpdateAllImagens']);
