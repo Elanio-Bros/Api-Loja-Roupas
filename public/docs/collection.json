@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "248b201e-1b95-401e-889b-a856b8de851e",
+        "_postman_id": "9446ff69-56b7-47fc-8ccb-8d6abbcbdc30",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -65,7 +65,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "eveniet",
+                                    "value": "voluptatem",
                                     "description": "The ID of the delete."
                                 }
                             ]
@@ -106,7 +106,7 @@
                                 {
                                     "id": "idUser",
                                     "key": "idUser",
-                                    "value": "ullam",
+                                    "value": "minima",
                                     "description": ""
                                 }
                             ]
@@ -128,7 +128,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"vel\",\"senha\":\"error\",\"email\":\"olarkin@example.org\"}"
+                            "raw": "{\"nome\":\"ipsum\",\"senha\":\"architecto\",\"email\":\"haskell70@example.org\"}"
                         },
                         "description": "",
                         "auth": {
@@ -150,7 +150,7 @@
                                 {
                                     "id": "idUser",
                                     "key": "idUser",
-                                    "value": "consequatur",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -323,7 +323,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "sed",
+                                    "value": "ut",
                                     "description": ""
                                 }
                             ]
@@ -364,7 +364,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "qui",
+                                    "value": "asperiores",
                                     "description": ""
                                 }
                             ]
@@ -405,13 +405,13 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "consequuntur",
+                                    "value": "debitis",
                                     "description": ""
                                 },
                                 {
                                     "id": "idImagem",
                                     "key": "idImagem",
-                                    "value": "dicta",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -452,7 +452,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "ipsum",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -493,7 +493,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "aut",
+                                    "value": "in",
                                     "description": ""
                                 }
                             ]
@@ -534,7 +534,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "velit",
+                                    "value": "dolor",
                                     "description": ""
                                 }
                             ]
@@ -575,7 +575,7 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "quam",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -616,13 +616,13 @@
                                 {
                                     "id": "idProduto",
                                     "key": "idProduto",
-                                    "value": "molestiae",
+                                    "value": "magni",
                                     "description": ""
                                 },
                                 {
                                     "id": "idFoto",
                                     "key": "idFoto",
-                                    "value": "quis",
+                                    "value": "deleniti",
                                     "description": ""
                                 }
                             ]
@@ -710,7 +710,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"quia\",\"senha\":\"animi\",\"email\":\"eunice.fay@example.net\"}"
+                            "raw": "{\"nome\":\"sunt\",\"senha\":\"et\",\"email\":\"lionel.kutch@example.org\"}"
                         },
                         "description": "",
                         "auth": {

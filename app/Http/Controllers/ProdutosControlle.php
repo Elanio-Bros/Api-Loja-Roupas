@@ -238,7 +238,7 @@ class ProdutosControlle extends Controller
         }
     }
 
-    public function deleteProduto(Request $request, $codigoProduto)
+    public function deleteProduto($codigoProduto)
     {
         $produto = Produtos::find($codigoProduto);
         $produto->delete();

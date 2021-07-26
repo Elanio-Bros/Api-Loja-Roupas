@@ -75,6 +75,16 @@ class UsuarioController extends Controller
 
     public function deleteUsuarioEmail(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|email',
+        ], [
+            'email.required' => 'Faltando campo email',
+        ]);
+
+        if ($validator->fails()) {
+            $errors = $validator->errors();
+            return response($errors->toJson(), 200);
+        }
         $usuario = Usuarios::where('email', $request->input('email'));
         $deleteUser = $usuario->delete();
         return response()->json($deleteUser == 1 ? 'Usuário Apagado' : 'Usuário Não Existe', $deleteUser == 1 ? 200 : 404);

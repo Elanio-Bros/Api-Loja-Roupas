@@ -35,7 +35,7 @@ endpoints:
         name: id
         description: 'The ID of the delete.'
         required: true
-        example: eveniet
+        example: voluptatem
         type: string
     queryParameters: []
     bodyParameters: []
@@ -58,7 +58,7 @@ endpoints:
         name: idUser
         description: ''
         required: true
-        example: ullam
+        example: minima
         type: string
     queryParameters: []
     bodyParameters:
@@ -66,19 +66,19 @@ endpoints:
         name: nome
         description: ''
         required: true
-        example: vel
+        example: ipsum
         type: string
       senha:
         name: senha
         description: ''
         required: true
-        example: error
+        example: architecto
         type: string
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: olarkin@example.org
+        example: haskell70@example.org
         type: string
     responses: []
     responseFields: []
@@ -99,7 +99,7 @@ endpoints:
         name: idUser
         description: ''
         required: true
-        example: consequatur
+        example: qui
         type: string
     queryParameters: []
     bodyParameters: []
@@ -190,7 +190,7 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: sed
+        example: ut
         type: string
     queryParameters: []
     bodyParameters: []
@@ -213,7 +213,7 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: qui
+        example: asperiores
         type: string
     queryParameters: []
     bodyParameters: []
@@ -236,13 +236,13 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: consequuntur
+        example: debitis
         type: string
       idImagem:
         name: idImagem
         description: ''
         required: true
-        example: dicta
+        example: et
         type: string
     queryParameters: []
     bodyParameters: []
@@ -265,7 +265,7 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: ipsum
+        example: et
         type: string
     queryParameters: []
     bodyParameters: []
@@ -288,7 +288,7 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: aut
+        example: in
         type: string
     queryParameters: []
     bodyParameters: []
@@ -311,7 +311,7 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: velit
+        example: dolor
         type: string
     queryParameters: []
     bodyParameters: []
@@ -334,7 +334,7 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: quam
+        example: et
         type: string
     queryParameters: []
     bodyParameters: []
@@ -357,13 +357,13 @@ endpoints:
         name: idProduto
         description: ''
         required: true
-        example: molestiae
+        example: magni
         type: string
       idFoto:
         name: idFoto
         description: ''
         required: true
-        example: quis
+        example: deleniti
         type: string
     queryParameters: []
     bodyParameters: []
@@ -405,19 +405,19 @@ endpoints:
         name: nome
         description: ''
         required: true
-        example: quia
+        example: sunt
         type: string
       senha:
         name: senha
         description: ''
         required: true
-        example: animi
+        example: et
         type: string
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: eunice.fay@example.net
+        example: lionel.kutch@example.org
         type: string
     responses: []
     responseFields: []

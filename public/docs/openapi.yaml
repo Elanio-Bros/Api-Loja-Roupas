@@ -72,7 +72,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the delete.'
-        example: eveniet
+        example: voluptatem
         required: true
         schema:
           type: string
@@ -115,15 +115,15 @@ paths:
                 nome:
                   type: string
                   description: ''
-                  example: vel
+                  example: ipsum
                 senha:
                   type: string
                   description: ''
-                  example: error
+                  example: architecto
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: olarkin@example.org
+                  example: haskell70@example.org
               required:
                 - nome
                 - senha
@@ -163,7 +163,7 @@ paths:
         in: path
         name: idUser
         description: ''
-        example: ullam
+        example: minima
         required: true
         schema:
           type: string
@@ -322,7 +322,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: sed
+        example: ut
         required: true
         schema:
           type: string
@@ -361,7 +361,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: qui
+        example: asperiores
         required: true
         schema:
           type: string
@@ -400,7 +400,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: consequuntur
+        example: debitis
         required: true
         schema:
           type: string
@@ -408,7 +408,7 @@ paths:
         in: path
         name: idImagem
         description: ''
-        example: dicta
+        example: et
         required: true
         schema:
           type: string
@@ -476,7 +476,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: ipsum
+        example: et
         required: true
         schema:
           type: string
@@ -515,7 +515,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: velit
+        example: dolor
         required: true
         schema:
           type: string
@@ -554,7 +554,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: quam
+        example: et
         required: true
         schema:
           type: string
@@ -593,7 +593,7 @@ paths:
         in: path
         name: idProduto
         description: ''
-        example: molestiae
+        example: magni
         required: true
         schema:
           type: string
@@ -601,7 +601,7 @@ paths:
         in: path
         name: idFoto
         description: ''
-        example: quis
+        example: deleniti
         required: true
         schema:
           type: string
@@ -674,15 +674,15 @@ paths:
                 nome:
                   type: string
                   description: ''
-                  example: quia
+                  example: sunt
                 senha:
                   type: string
                   description: ''
-                  example: animi
+                  example: et
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: eunice.fay@example.net
+                  example: lionel.kutch@example.org
               required:
                 - nome
                 - senha
