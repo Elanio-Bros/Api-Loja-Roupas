@@ -29,32 +29,21 @@ return [
     'routes' => [
         [
             'match' => [
-                'prefixes' => ['api/*'],
+                'prefixes' => ['api/*', 'token/*'],
                 'domains' => ['*'],
                 'versions' => ['v1'],
             ],
             'include' => [],
             'exclude' => [],
             'apply' => [
-                'headers' => ['Content-Type' => 'application/json', 'Accept' => 'application/json'],
+                'headers' => ['Content-Type' => 'application/json', 'Accept' => 'application/json', 'token' => 'api_token'], [],
                 'response_calls' => [
-                    'methods' => ['GET'],
                     'config' => ['app.env' => 'documentation'],
                     'queryParams' => [],
                     'bodyParams' => [],
                     'fileParams' => [],
                     'cookies' => [],
                 ],
-            ],
-            [
-                'prefixes' => ['*/delete'],
-                'domains' => ['*'],
-                'versions' => ['v1'],
-            ],
-            'include' => [],
-            'exclude' => [],
-            'apply' => [
-                'headers' => ['token' => 'api_token'],
             ],
         ],
     ],

@@ -19,10 +19,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('checkToken')->group(function () {
+Route::name('token')->middleware('checkToken')->group(function () {
     Route::middleware('is_admin')->group(function () {
-        Route::delete('/Usuario/delete', [UsuarioController::class, 'deleteUsuarioEmail']);
-        Route::delete('/Usuario/delete/{id}', [UsuarioController::class, 'deleteUsuarioId']);
+        Route::delete('/usuario/delete', [UsuarioController::class, 'deleteUsuarioEmail']);
+        Route::delete('/usuario/delete/{id}', [UsuarioController::class, 'deleteUsuarioId']);
         Route::put('/usuarios/{idUser}', [UsuarioController::class, 'updatePutUser']);
         Route::patch('/usuarios/{idUser}', [UsuarioController::class, 'updatePatchUser']);
         Route::get('/usuarios', [UsuarioController::class, 'getAllUsuarios']);
@@ -42,4 +42,4 @@ Route::middleware('checkToken')->group(function () {
     });
 });
 Route::get('/usuarioToken', [UsuarioController::class, 'getUsuarioToken']);
-Route::post('/criarUsuario', [UsuarioController::class, 'postCreateUsuario']);
+Route::post('/criarUsuario', [UsuarioController::class, 'postCreateUsuario']);;

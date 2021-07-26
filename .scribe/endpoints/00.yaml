@@ -4,12 +4,14 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: api/Usuario/delete
+    uri: api/usuario/delete
     metadata:
       title: ''
       description: ''
       authenticated: false
     headers:
+      Content-Type: application/json
+      Accept: application/json
       token: api_token
     urlParameters: []
     queryParameters: []
@@ -19,19 +21,21 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/Usuario/delete/{id}'
+    uri: 'api/usuario/delete/{id}'
     metadata:
       title: ''
       description: ''
       authenticated: false
     headers:
+      Content-Type: application/json
+      Accept: application/json
       token: api_token
     urlParameters:
       id:
         name: id
         description: 'The ID of the delete.'
         required: true
-        example: omnis
+        example: eveniet
         type: string
     queryParameters: []
     bodyParameters: []
@@ -46,14 +50,15 @@ endpoints:
       description: ''
       authenticated: false
     headers:
-      token: api_token
       Content-Type: application/json
+      Accept: application/json
+      token: api_token
     urlParameters:
       idUser:
         name: idUser
         description: ''
         required: true
-        example: aut
+        example: ullam
         type: string
     queryParameters: []
     bodyParameters:
@@ -61,19 +66,19 @@ endpoints:
         name: nome
         description: ''
         required: true
-        example: rem
+        example: vel
         type: string
       senha:
         name: senha
         description: ''
         required: true
-        example: voluptas
+        example: error
         type: string
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: joe51@example.org
+        example: olarkin@example.org
         type: string
     responses: []
     responseFields: []
@@ -86,13 +91,15 @@ endpoints:
       description: ''
       authenticated: false
     headers:
+      Content-Type: application/json
+      Accept: application/json
       token: api_token
     urlParameters:
       idUser:
         name: idUser
         description: ''
         required: true
-        example: laborum
+        example: consequatur
         type: string
     queryParameters: []
     bodyParameters: []
@@ -107,6 +114,8 @@ endpoints:
       description: ''
       authenticated: false
     headers:
+      Content-Type: application/json
+      Accept: application/json
       token: api_token
     urlParameters: []
     queryParameters: []
@@ -122,6 +131,8 @@ endpoints:
       description: ''
       authenticated: false
     headers:
+      Content-Type: application/json
+      Accept: application/json
       token: api_token
     urlParameters: []
     queryParameters: []
@@ -137,6 +148,8 @@ endpoints:
       description: ''
       authenticated: false
     headers:
+      Content-Type: application/json
+      Accept: application/json
       token: api_token
     urlParameters: []
     queryParameters: []
@@ -152,6 +165,8 @@ endpoints:
       description: ''
       authenticated: false
     headers:
+      Content-Type: application/json
+      Accept: application/json
       token: api_token
     urlParameters: []
     queryParameters: []
@@ -167,13 +182,15 @@ endpoints:
       description: ''
       authenticated: false
     headers:
+      Content-Type: application/json
+      Accept: application/json
       token: api_token
     urlParameters:
       idProduto:
         name: idProduto
         description: ''
         required: true
-        example: ex
+        example: sed
         type: string
     queryParameters: []
     bodyParameters: []
@@ -188,96 +205,8 @@ endpoints:
       description: ''
       authenticated: false
     headers:
-      token: api_token
-    urlParameters:
-      idProduto:
-        name: idProduto
-        description: ''
-        required: true
-        example: aut
-        type: string
-    queryParameters: []
-    bodyParameters: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - POST
-    uri: 'api/fotos/update/{idProduto}/{idImagem}'
-    metadata:
-      title: ''
-      description: ''
-      authenticated: false
-    headers:
-      token: api_token
-    urlParameters:
-      idProduto:
-        name: idProduto
-        description: ''
-        required: true
-        example: aut
-        type: string
-      idImagem:
-        name: idImagem
-        description: ''
-        required: true
-        example: id
-        type: string
-    queryParameters: []
-    bodyParameters: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - PUT
-    uri: 'api/produtos/{idProduto}'
-    metadata:
-      title: ''
-      description: ''
-      authenticated: false
-    headers:
-      token: api_token
-    urlParameters:
-      idProduto:
-        name: idProduto
-        description: ''
-        required: true
-        example: corrupti
-        type: string
-    queryParameters: []
-    bodyParameters: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - PATCH
-    uri: 'api/produtos/{idProduto}'
-    metadata:
-      title: ''
-      description: ''
-      authenticated: false
-    headers:
-      token: api_token
-    urlParameters:
-      idProduto:
-        name: idProduto
-        description: ''
-        required: true
-        example: dignissimos
-        type: string
-    queryParameters: []
-    bodyParameters: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'api/produtos/delete/{idProduto}'
-    metadata:
-      title: ''
-      description: ''
-      authenticated: false
-    headers:
+      Content-Type: application/json
+      Accept: application/json
       token: api_token
     urlParameters:
       idProduto:
@@ -292,6 +221,104 @@ endpoints:
     responseFields: []
   -
     httpMethods:
+      - POST
+    uri: 'api/fotos/update/{idProduto}/{idImagem}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      token: api_token
+    urlParameters:
+      idProduto:
+        name: idProduto
+        description: ''
+        required: true
+        example: consequuntur
+        type: string
+      idImagem:
+        name: idImagem
+        description: ''
+        required: true
+        example: dicta
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/produtos/{idProduto}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      token: api_token
+    urlParameters:
+      idProduto:
+        name: idProduto
+        description: ''
+        required: true
+        example: ipsum
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'api/produtos/{idProduto}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      token: api_token
+    urlParameters:
+      idProduto:
+        name: idProduto
+        description: ''
+        required: true
+        example: aut
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/produtos/delete/{idProduto}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      token: api_token
+    urlParameters:
+      idProduto:
+        name: idProduto
+        description: ''
+        required: true
+        example: velit
+        type: string
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
       - DELETE
     uri: 'api/foto/delete/all/{idProduto}'
     metadata:
@@ -299,13 +326,15 @@ endpoints:
       description: ''
       authenticated: false
     headers:
+      Content-Type: application/json
+      Accept: application/json
       token: api_token
     urlParameters:
       idProduto:
         name: idProduto
         description: ''
         required: true
-        example: error
+        example: quam
         type: string
     queryParameters: []
     bodyParameters: []
@@ -320,19 +349,21 @@ endpoints:
       description: ''
       authenticated: false
     headers:
+      Content-Type: application/json
+      Accept: application/json
       token: api_token
     urlParameters:
       idProduto:
         name: idProduto
         description: ''
         required: true
-        example: ullam
+        example: molestiae
         type: string
       idFoto:
         name: idFoto
         description: ''
         required: true
-        example: ea
+        example: quis
         type: string
     queryParameters: []
     bodyParameters: []
@@ -347,6 +378,8 @@ endpoints:
       description: ''
       authenticated: false
     headers:
+      Content-Type: application/json
+      Accept: application/json
       token: api_token
     urlParameters: []
     queryParameters: []
@@ -362,8 +395,9 @@ endpoints:
       description: ''
       authenticated: false
     headers:
-      token: api_token
       Content-Type: application/json
+      Accept: application/json
+      token: api_token
     urlParameters: []
     queryParameters: []
     bodyParameters:
@@ -371,19 +405,19 @@ endpoints:
         name: nome
         description: ''
         required: true
-        example: est
+        example: quia
         type: string
       senha:
         name: senha
         description: ''
         required: true
-        example: modi
+        example: animi
         type: string
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: martine01@example.org
+        example: eunice.fay@example.net
         type: string
     responses: []
     responseFields: []

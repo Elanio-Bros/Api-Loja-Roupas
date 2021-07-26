@@ -53,7 +53,7 @@
             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
         </ul>
         <ul class="toc-footer" id="last-updated">
-            <li>Last updated: July 24 2021</li>
+            <li>Last updated: July 26 2021</li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -77,28 +77,31 @@
 
 
 
-            <h2 id="endpoints-DELETEapi-Usuario-delete">DELETE api/Usuario/delete</h2>
+            <h2 id="endpoints-DELETEapi-usuario-delete">DELETE api/usuario/delete</h2>
 
             <p>
             </p>
 
 
 
-            <span id="example-requests-DELETEapi-Usuario-delete">
+            <span id="example-requests-DELETEapi-usuario-delete">
                 <blockquote>Example request:</blockquote>
 
 
                 <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/Usuario/delete" \
+    "http://localhost/api/usuario/delete" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/Usuario/delete"
+    "http://localhost/api/usuario/delete"
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -107,65 +110,69 @@ fetch(url, {
 }).then(response =&gt; response.json());</code></pre>
             </span>
 
-            <span id="example-responses-DELETEapi-Usuario-delete">
+            <span id="example-responses-DELETEapi-usuario-delete">
             </span>
-            <span id="execution-results-DELETEapi-Usuario-delete" hidden>
-                <blockquote>Received response<span id="execution-response-status-DELETEapi-Usuario-delete"></span>:
+            <span id="execution-results-DELETEapi-usuario-delete" hidden>
+                <blockquote>Received response<span id="execution-response-status-DELETEapi-usuario-delete"></span>:
                 </blockquote>
-                <pre class="json"><code id="execution-response-content-DELETEapi-Usuario-delete"></code></pre>
+                <pre class="json"><code id="execution-response-content-DELETEapi-usuario-delete"></code></pre>
             </span>
-            <span id="execution-error-DELETEapi-Usuario-delete" hidden>
+            <span id="execution-error-DELETEapi-usuario-delete" hidden>
                 <blockquote>Request failed with error:</blockquote>
-                <pre><code id="execution-error-message-DELETEapi-Usuario-delete"></code></pre>
+                <pre><code id="execution-error-message-DELETEapi-usuario-delete"></code></pre>
             </span>
-            <form id="form-DELETEapi-Usuario-delete" data-method="DELETE" data-path="api/Usuario/delete" data-authed="0"
-                data-hasfiles="0" data-isarraybody="0" data-headers='{"token":"api_token"}' autocomplete="off"
-                onsubmit="event.preventDefault(); executeTryOut('DELETEapi-Usuario-delete', this);">
+            <form id="form-DELETEapi-usuario-delete" data-method="DELETE" data-path="api/usuario/delete" data-authed="0"
+                data-hasfiles="0" data-isarraybody="0"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
+                autocomplete="off" onsubmit="event.preventDefault(); executeTryOut('DELETEapi-usuario-delete', this);">
                 <h3>
                     Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                         style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        id="btn-tryout-DELETEapi-Usuario-delete" onclick="tryItOut('DELETEapi-Usuario-delete');">Try it
+                        id="btn-tryout-DELETEapi-usuario-delete" onclick="tryItOut('DELETEapi-usuario-delete');">Try it
                         out ⚡
                     </button>
                     <button type="button"
                         style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        id="btn-canceltryout-DELETEapi-Usuario-delete"
-                        onclick="cancelTryOut('DELETEapi-Usuario-delete');" hidden>Cancel
+                        id="btn-canceltryout-DELETEapi-usuario-delete"
+                        onclick="cancelTryOut('DELETEapi-usuario-delete');" hidden>Cancel
                     </button>&nbsp;&nbsp;
                     <button type="submit"
                         style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        id="btn-executetryout-DELETEapi-Usuario-delete" hidden>Send Request 💥
+                        id="btn-executetryout-DELETEapi-usuario-delete" hidden>Send Request 💥
                     </button>
                 </h3>
                 <p>
                     <small class="badge badge-red">DELETE</small>
-                    <b><code>api/Usuario/delete</code></b>
+                    <b><code>api/usuario/delete</code></b>
                 </p>
             </form>
 
-            <h2 id="endpoints-DELETEapi-Usuario-delete--id-">DELETE api/Usuario/delete/{id}</h2>
+            <h2 id="endpoints-DELETEapi-usuario-delete--id-">DELETE api/usuario/delete/{id}</h2>
 
             <p>
             </p>
 
 
 
-            <span id="example-requests-DELETEapi-Usuario-delete--id-">
+            <span id="example-requests-DELETEapi-usuario-delete--id-">
                 <blockquote>Example request:</blockquote>
 
 
                 <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/Usuario/delete/omnis" \
+    "http://localhost/api/usuario/delete/eveniet" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/Usuario/delete/omnis"
+    "http://localhost/api/usuario/delete/eveniet"
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -174,46 +181,47 @@ fetch(url, {
 }).then(response =&gt; response.json());</code></pre>
             </span>
 
-            <span id="example-responses-DELETEapi-Usuario-delete--id-">
+            <span id="example-responses-DELETEapi-usuario-delete--id-">
             </span>
-            <span id="execution-results-DELETEapi-Usuario-delete--id-" hidden>
-                <blockquote>Received response<span id="execution-response-status-DELETEapi-Usuario-delete--id-"></span>:
+            <span id="execution-results-DELETEapi-usuario-delete--id-" hidden>
+                <blockquote>Received response<span id="execution-response-status-DELETEapi-usuario-delete--id-"></span>:
                 </blockquote>
-                <pre class="json"><code id="execution-response-content-DELETEapi-Usuario-delete--id-"></code></pre>
+                <pre class="json"><code id="execution-response-content-DELETEapi-usuario-delete--id-"></code></pre>
             </span>
-            <span id="execution-error-DELETEapi-Usuario-delete--id-" hidden>
+            <span id="execution-error-DELETEapi-usuario-delete--id-" hidden>
                 <blockquote>Request failed with error:</blockquote>
-                <pre><code id="execution-error-message-DELETEapi-Usuario-delete--id-"></code></pre>
+                <pre><code id="execution-error-message-DELETEapi-usuario-delete--id-"></code></pre>
             </span>
-            <form id="form-DELETEapi-Usuario-delete--id-" data-method="DELETE" data-path="api/Usuario/delete/{id}"
-                data-authed="0" data-hasfiles="0" data-isarraybody="0" data-headers='{"token":"api_token"}'
+            <form id="form-DELETEapi-usuario-delete--id-" data-method="DELETE" data-path="api/usuario/delete/{id}"
+                data-authed="0" data-hasfiles="0" data-isarraybody="0"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
                 autocomplete="off"
-                onsubmit="event.preventDefault(); executeTryOut('DELETEapi-Usuario-delete--id-', this);">
+                onsubmit="event.preventDefault(); executeTryOut('DELETEapi-usuario-delete--id-', this);">
                 <h3>
                     Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                         style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        id="btn-tryout-DELETEapi-Usuario-delete--id-"
-                        onclick="tryItOut('DELETEapi-Usuario-delete--id-');">Try it out ⚡
+                        id="btn-tryout-DELETEapi-usuario-delete--id-"
+                        onclick="tryItOut('DELETEapi-usuario-delete--id-');">Try it out ⚡
                     </button>
                     <button type="button"
                         style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        id="btn-canceltryout-DELETEapi-Usuario-delete--id-"
-                        onclick="cancelTryOut('DELETEapi-Usuario-delete--id-');" hidden>Cancel
+                        id="btn-canceltryout-DELETEapi-usuario-delete--id-"
+                        onclick="cancelTryOut('DELETEapi-usuario-delete--id-');" hidden>Cancel
                     </button>&nbsp;&nbsp;
                     <button type="submit"
                         style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        id="btn-executetryout-DELETEapi-Usuario-delete--id-" hidden>Send Request 💥
+                        id="btn-executetryout-DELETEapi-usuario-delete--id-" hidden>Send Request 💥
                     </button>
                 </h3>
                 <p>
                     <small class="badge badge-red">DELETE</small>
-                    <b><code>api/Usuario/delete/{id}</code></b>
+                    <b><code>api/usuario/delete/{id}</code></b>
                 </p>
                 <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                 <p>
                     <b><code>id</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
-                    <input type="text" name="id" data-endpoint="DELETEapi-Usuario-delete--id-" data-component="url"
+                    <input type="text" name="id" data-endpoint="DELETEapi-usuario-delete--id-" data-component="url"
                         required hidden>
                     <br>
                 <p>The ID of the delete.</p>
@@ -232,30 +240,31 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/usuarios/aut" \
-    --header "token: api_token" \
+    "http://localhost/api/usuarios/ullam" \
     --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "token: api_token" \
     --data "{
-    \"nome\": \"rem\",
-    \"senha\": \"voluptas\",
-    \"email\": \"joe51@example.org\"
+    \"nome\": \"vel\",
+    \"senha\": \"error\",
+    \"email\": \"olarkin@example.org\"
 }"
 </code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/usuarios/aut"
+    "http://localhost/api/usuarios/ullam"
 );
 
 const headers = {
-    "token": "api_token",
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 let body = {
-    "nome": "rem",
-    "senha": "voluptas",
-    "email": "joe51@example.org"
+    "nome": "vel",
+    "senha": "error",
+    "email": "olarkin@example.org"
 }
 
 fetch(url, {
@@ -278,8 +287,8 @@ fetch(url, {
             </span>
             <form id="form-PUTapi-usuarios--idUser-" data-method="PUT" data-path="api/usuarios/{idUser}" data-authed="0"
                 data-hasfiles="0" data-isarraybody="0"
-                data-headers='{"token":"api_token","Content-Type":"application\/json"}' autocomplete="off"
-                onsubmit="event.preventDefault(); executeTryOut('PUTapi-usuarios--idUser-', this);">
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
+                autocomplete="off" onsubmit="event.preventDefault(); executeTryOut('PUTapi-usuarios--idUser-', this);">
                 <h3>
                     Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
@@ -343,16 +352,19 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request PATCH \
-    "http://localhost/api/usuarios/laborum" \
+    "http://localhost/api/usuarios/consequatur" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/usuarios/laborum"
+    "http://localhost/api/usuarios/consequatur"
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -373,7 +385,8 @@ fetch(url, {
                 <pre><code id="execution-error-message-PATCHapi-usuarios--idUser-"></code></pre>
             </span>
             <form id="form-PATCHapi-usuarios--idUser-" data-method="PATCH" data-path="api/usuarios/{idUser}"
-                data-authed="0" data-hasfiles="0" data-isarraybody="0" data-headers='{"token":"api_token"}'
+                data-authed="0" data-hasfiles="0" data-isarraybody="0"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
                 autocomplete="off"
                 onsubmit="event.preventDefault(); executeTryOut('PATCHapi-usuarios--idUser-', this);">
                 <h3>
@@ -419,6 +432,8 @@ fetch(url, {
 
                 <pre><code class="language-bash">curl --request GET \
     --get "http://localhost/api/usuarios" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
@@ -426,8 +441,9 @@ fetch(url, {
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -448,8 +464,9 @@ fetch(url, {
                 <pre><code id="execution-error-message-GETapi-usuarios"></code></pre>
             </span>
             <form id="form-GETapi-usuarios" data-method="GET" data-path="api/usuarios" data-authed="0" data-hasfiles="0"
-                data-isarraybody="0" data-headers='{"token":"api_token"}' autocomplete="off"
-                onsubmit="event.preventDefault(); executeTryOut('GETapi-usuarios', this);">
+                data-isarraybody="0"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
+                autocomplete="off" onsubmit="event.preventDefault(); executeTryOut('GETapi-usuarios', this);">
                 <h3>
                     Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
@@ -484,6 +501,8 @@ fetch(url, {
 
                 <pre><code class="language-bash">curl --request GET \
     --get "http://localhost/api/historico" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
@@ -491,8 +510,9 @@ fetch(url, {
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -513,8 +533,9 @@ fetch(url, {
                 <pre><code id="execution-error-message-GETapi-historico"></code></pre>
             </span>
             <form id="form-GETapi-historico" data-method="GET" data-path="api/historico" data-authed="0"
-                data-hasfiles="0" data-isarraybody="0" data-headers='{"token":"api_token"}' autocomplete="off"
-                onsubmit="event.preventDefault(); executeTryOut('GETapi-historico', this);">
+                data-hasfiles="0" data-isarraybody="0"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
+                autocomplete="off" onsubmit="event.preventDefault(); executeTryOut('GETapi-historico', this);">
                 <h3>
                     Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
@@ -549,6 +570,8 @@ fetch(url, {
 
                 <pre><code class="language-bash">curl --request GET \
     --get "http://localhost/api/produtos" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
@@ -556,8 +579,9 @@ fetch(url, {
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -578,8 +602,9 @@ fetch(url, {
                 <pre><code id="execution-error-message-GETapi-produtos"></code></pre>
             </span>
             <form id="form-GETapi-produtos" data-method="GET" data-path="api/produtos" data-authed="0" data-hasfiles="0"
-                data-isarraybody="0" data-headers='{"token":"api_token"}' autocomplete="off"
-                onsubmit="event.preventDefault(); executeTryOut('GETapi-produtos', this);">
+                data-isarraybody="0"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
+                autocomplete="off" onsubmit="event.preventDefault(); executeTryOut('GETapi-produtos', this);">
                 <h3>
                     Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
@@ -614,6 +639,8 @@ fetch(url, {
 
                 <pre><code class="language-bash">curl --request POST \
     "http://localhost/api/produto/create" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
@@ -621,8 +648,9 @@ fetch(url, {
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -643,8 +671,9 @@ fetch(url, {
                 <pre><code id="execution-error-message-POSTapi-produto-create"></code></pre>
             </span>
             <form id="form-POSTapi-produto-create" data-method="POST" data-path="api/produto/create" data-authed="0"
-                data-hasfiles="0" data-isarraybody="0" data-headers='{"token":"api_token"}' autocomplete="off"
-                onsubmit="event.preventDefault(); executeTryOut('POSTapi-produto-create', this);">
+                data-hasfiles="0" data-isarraybody="0"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
+                autocomplete="off" onsubmit="event.preventDefault(); executeTryOut('POSTapi-produto-create', this);">
                 <h3>
                     Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
@@ -680,16 +709,19 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/fotos/upload/ex" \
+    "http://localhost/api/fotos/upload/sed" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/fotos/upload/ex"
+    "http://localhost/api/fotos/upload/sed"
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -711,7 +743,8 @@ fetch(url, {
                 <pre><code id="execution-error-message-POSTapi-fotos-upload--idProduto-"></code></pre>
             </span>
             <form id="form-POSTapi-fotos-upload--idProduto-" data-method="POST" data-path="api/fotos/upload/{idProduto}"
-                data-authed="0" data-hasfiles="0" data-isarraybody="0" data-headers='{"token":"api_token"}'
+                data-authed="0" data-hasfiles="0" data-isarraybody="0"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
                 autocomplete="off"
                 onsubmit="event.preventDefault(); executeTryOut('POSTapi-fotos-upload--idProduto-', this);">
                 <h3>
@@ -756,16 +789,19 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/fotos/update/all/aut" \
+    "http://localhost/api/fotos/update/all/qui" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/fotos/update/all/aut"
+    "http://localhost/api/fotos/update/all/qui"
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -789,7 +825,8 @@ fetch(url, {
             </span>
             <form id="form-POSTapi-fotos-update-all--idProduto-" data-method="POST"
                 data-path="api/fotos/update/all/{idProduto}" data-authed="0" data-hasfiles="0" data-isarraybody="0"
-                data-headers='{"token":"api_token"}' autocomplete="off"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
+                autocomplete="off"
                 onsubmit="event.preventDefault(); executeTryOut('POSTapi-fotos-update-all--idProduto-', this);">
                 <h3>
                     Request&nbsp;&nbsp;&nbsp;
@@ -834,16 +871,19 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/fotos/update/aut/id" \
+    "http://localhost/api/fotos/update/consequuntur/dicta" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/fotos/update/aut/id"
+    "http://localhost/api/fotos/update/consequuntur/dicta"
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -867,7 +907,9 @@ fetch(url, {
             </span>
             <form id="form-POSTapi-fotos-update--idProduto---idImagem-" data-method="POST"
                 data-path="api/fotos/update/{idProduto}/{idImagem}" data-authed="0" data-hasfiles="0"
-                data-isarraybody="0" data-headers='{"token":"api_token"}' autocomplete="off"
+                data-isarraybody="0"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
+                autocomplete="off"
                 onsubmit="event.preventDefault(); executeTryOut('POSTapi-fotos-update--idProduto---idImagem-', this);">
                 <h3>
                     Request&nbsp;&nbsp;&nbsp;
@@ -917,16 +959,19 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/produtos/corrupti" \
+    "http://localhost/api/produtos/ipsum" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/produtos/corrupti"
+    "http://localhost/api/produtos/ipsum"
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -947,7 +992,8 @@ fetch(url, {
                 <pre><code id="execution-error-message-PUTapi-produtos--idProduto-"></code></pre>
             </span>
             <form id="form-PUTapi-produtos--idProduto-" data-method="PUT" data-path="api/produtos/{idProduto}"
-                data-authed="0" data-hasfiles="0" data-isarraybody="0" data-headers='{"token":"api_token"}'
+                data-authed="0" data-hasfiles="0" data-isarraybody="0"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
                 autocomplete="off"
                 onsubmit="event.preventDefault(); executeTryOut('PUTapi-produtos--idProduto-', this);">
                 <h3>
@@ -992,16 +1038,19 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request PATCH \
-    "http://localhost/api/produtos/dignissimos" \
+    "http://localhost/api/produtos/aut" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/produtos/dignissimos"
+    "http://localhost/api/produtos/aut"
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -1022,7 +1071,8 @@ fetch(url, {
                 <pre><code id="execution-error-message-PATCHapi-produtos--idProduto-"></code></pre>
             </span>
             <form id="form-PATCHapi-produtos--idProduto-" data-method="PATCH" data-path="api/produtos/{idProduto}"
-                data-authed="0" data-hasfiles="0" data-isarraybody="0" data-headers='{"token":"api_token"}'
+                data-authed="0" data-hasfiles="0" data-isarraybody="0"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
                 autocomplete="off"
                 onsubmit="event.preventDefault(); executeTryOut('PATCHapi-produtos--idProduto-', this);">
                 <h3>
@@ -1067,16 +1117,19 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/produtos/delete/qui" \
+    "http://localhost/api/produtos/delete/velit" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/produtos/delete/qui"
+    "http://localhost/api/produtos/delete/velit"
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -1100,7 +1153,8 @@ fetch(url, {
             </span>
             <form id="form-DELETEapi-produtos-delete--idProduto-" data-method="DELETE"
                 data-path="api/produtos/delete/{idProduto}" data-authed="0" data-hasfiles="0" data-isarraybody="0"
-                data-headers='{"token":"api_token"}' autocomplete="off"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
+                autocomplete="off"
                 onsubmit="event.preventDefault(); executeTryOut('DELETEapi-produtos-delete--idProduto-', this);">
                 <h3>
                     Request&nbsp;&nbsp;&nbsp;
@@ -1144,16 +1198,19 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/foto/delete/all/error" \
+    "http://localhost/api/foto/delete/all/quam" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/foto/delete/all/error"
+    "http://localhost/api/foto/delete/all/quam"
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -1177,7 +1234,8 @@ fetch(url, {
             </span>
             <form id="form-DELETEapi-foto-delete-all--idProduto-" data-method="DELETE"
                 data-path="api/foto/delete/all/{idProduto}" data-authed="0" data-hasfiles="0" data-isarraybody="0"
-                data-headers='{"token":"api_token"}' autocomplete="off"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
+                autocomplete="off"
                 onsubmit="event.preventDefault(); executeTryOut('DELETEapi-foto-delete-all--idProduto-', this);">
                 <h3>
                     Request&nbsp;&nbsp;&nbsp;
@@ -1222,16 +1280,19 @@ fetch(url, {
 
 
                 <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/foto/delete/ullam/ea" \
+    "http://localhost/api/foto/delete/molestiae/quis" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --header "token: api_token"</code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/foto/delete/ullam/ea"
+    "http://localhost/api/foto/delete/molestiae/quis"
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
+    "token": "api_token",
 };
 
 fetch(url, {
@@ -1255,7 +1316,8 @@ fetch(url, {
             </span>
             <form id="form-DELETEapi-foto-delete--idProduto---idFoto-" data-method="DELETE"
                 data-path="api/foto/delete/{idProduto}/{idFoto}" data-authed="0" data-hasfiles="0" data-isarraybody="0"
-                data-headers='{"token":"api_token"}' autocomplete="off"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
+                autocomplete="off"
                 onsubmit="event.preventDefault(); executeTryOut('DELETEapi-foto-delete--idProduto---idFoto-', this);">
                 <h3>
                     Request&nbsp;&nbsp;&nbsp;
@@ -1306,14 +1368,16 @@ fetch(url, {
 
                 <pre><code class="language-bash">curl --request GET \
     --get "http://localhost/api/usuarioToken" \
-    --header "token: api_token"</code></pre>
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    </code></pre>
 
                 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/usuarioToken"
 );
 
 const headers = {
-    "token": "api_token",
+    "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
@@ -1322,7 +1386,6 @@ fetch(url, {
     headers,
 }).then(response =&gt; response.json());</code></pre>
             </span>
-
             <span id="example-responses-GETapi-usuarioToken">
             </span>
             <span id="execution-results-GETapi-usuarioToken" hidden>
@@ -1335,8 +1398,9 @@ fetch(url, {
                 <pre><code id="execution-error-message-GETapi-usuarioToken"></code></pre>
             </span>
             <form id="form-GETapi-usuarioToken" data-method="GET" data-path="api/usuarioToken" data-authed="0"
-                data-hasfiles="0" data-isarraybody="0" data-headers='{"token":"api_token"}' autocomplete="off"
-                onsubmit="event.preventDefault(); executeTryOut('GETapi-usuarioToken', this);">
+                data-hasfiles="0" data-isarraybody="0"
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
+                autocomplete="off" onsubmit="event.preventDefault(); executeTryOut('GETapi-usuarioToken', this);">
                 <h3>
                     Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
@@ -1357,6 +1421,20 @@ fetch(url, {
                     <small class="badge badge-green">GET</small>
                     <b><code>api/usuarioToken</code></b>
                 </p>
+
+                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+                <p>
+                    <b><code>nome</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <input type="text" name="nome" data-endpoint="PUTapi-usuarios--idUser-" data-component="body"
+                        required hidden>
+                    <br>
+                </p>
+                <p>
+                    <b><code>senha</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <input type="text" name="senha" data-endpoint="PUTapi-usuarios--idUser-" data-component="body"
+                        required hidden>
+                    <br>
+                </p>
             </form>
 
             <h2 id="endpoints-POSTapi-criarUsuario">POST api/criarUsuario</h2>
@@ -1372,12 +1450,12 @@ fetch(url, {
 
                 <pre><code class="language-bash">curl --request POST \
     "http://localhost/api/criarUsuario" \
-    --header "token: api_token" \
     --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
     --data "{
-    \"nome\": \"est\",
-    \"senha\": \"modi\",
-    \"email\": \"martine01@example.org\"
+    \"nome\": \"quia\",
+    \"senha\": \"animi\",
+    \"email\": \"eunice.fay@example.net\"
 }"
 </code></pre>
 
@@ -1386,15 +1464,14 @@ fetch(url, {
 );
 
 const headers = {
-    "token": "api_token",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
-    "nome": "est",
-    "senha": "modi",
-    "email": "martine01@example.org"
+    "nome": "quia",
+    "senha": "animi",
+    "email": "eunice.fay@example.net"
 }
 
 fetch(url, {
@@ -1417,8 +1494,8 @@ fetch(url, {
             </span>
             <form id="form-POSTapi-criarUsuario" data-method="POST" data-path="api/criarUsuario" data-authed="0"
                 data-hasfiles="0" data-isarraybody="0"
-                data-headers='{"token":"api_token","Content-Type":"application\/json"}' autocomplete="off"
-                onsubmit="event.preventDefault(); executeTryOut('POSTapi-criarUsuario', this);">
+                data-headers='{"Content-Type":"application\/json","Accept":"application\/json","token":"api_token"}'
+                autocomplete="off" onsubmit="event.preventDefault(); executeTryOut('POSTapi-criarUsuario', this);">
                 <h3>
                     Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
