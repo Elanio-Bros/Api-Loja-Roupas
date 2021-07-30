@@ -62,7 +62,7 @@
             <blockquote>
                 <p>Base URL</p>
             </blockquote>
-            <pre><code class="language-yaml">http://localhost</code></pre>
+            <pre><code class="language-yaml"><p>{{ Request::url() }}</p></code></pre>
 
             <h1>Authentication</h1>
             <p>Some endpoints will need to use the generated user's token, and it must always be sent by the request
@@ -83,7 +83,7 @@
                 <blockquote>Example request:</blockquote>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/usuario/delete"
+    "{{ Request::url() }}/api/usuario/delete"
 );
 
 const headers = {
@@ -144,7 +144,7 @@ fetch(url, {
                 <blockquote>Example request:</blockquote>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/usuario/delete/4"
+    "{{ Request::url() }}/api/usuario/delete/4"
 );
 
 const headers = {
@@ -204,7 +204,7 @@ fetch(url, {
 
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/usuarios/1"
+    "{{ Request::url() }}/api/usuarios/1"
 );
 
 const headers = {
@@ -290,7 +290,7 @@ fetch(url, {
 
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/usuarios/1"
+    "{{ Request::url() }}/api/usuarios/1"
 );
 
 const headers = {
@@ -371,7 +371,7 @@ fetch(url, {
 
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/usuarios"
+    "{{ Request::url() }}/api/usuarios"
 );
 
 const headers = {
@@ -422,7 +422,7 @@ fetch(url, {
 
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/historico"
+    "{{ Request::url() }}/api/historico"
 );
 
 const headers = {
@@ -483,14 +483,14 @@ fetch(url, {
                 <blockquote>Example request:</blockquote>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/produtos"
+    "{{ Request::url() }}/api/produtos"
 );
 
 const url = new URL(
-    "http://localhost/api/produtos?categoria=Camisa"
+    "{{ Request::url() }}/api/produtos?categoria=Camisa"
 );
 const url = new URL(
-    "http://localhost/api/produtos?categoria=Camisa&tamanho=M"
+    "{{ Request::url() }}/api/produtos?categoria=Camisa&tamanho=M"
 );
 
 const headers = {
@@ -574,7 +574,7 @@ fetch(url, {
 
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/produto/create"
+    "{{ Request::url() }}/api/produto/create"
 );
 
 const headers = {
@@ -660,7 +660,7 @@ fetch(url, {
 
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/fotos/upload/1"
+    "{{ Request::url() }}/api/fotos/upload/1"
 );
 
 const headers = {
@@ -732,7 +732,7 @@ fetch(url, {
 
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/fotos/update/all/asperiores"
+    "{{ Request::url() }}/api/fotos/update/all/asperiores"
 );
 
 const headers = {
@@ -804,7 +804,7 @@ fetch(url, {
                 <blockquote>Example request:</blockquote>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/fotos/update/debitis/et"
+    "{{ Request::url() }}/api/fotos/update/debitis/et"
 );
 
 const headers = {
@@ -882,7 +882,7 @@ fetch(url, {
                 <blockquote>Example request:</blockquote>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/produtos/1"
+    "{{ Request::url() }}/api/produtos/1"
 );
 
 const headers = {
@@ -977,7 +977,7 @@ fetch(url, {
                 <blockquote>Example request:</blockquote>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/produtos/1"
+    "{{ Request::url() }}/api/produtos/1"
 );
 
 const headers = {
@@ -1067,7 +1067,7 @@ fetch(url, {
                 <blockquote>Example request:</blockquote>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/produtos/delete/dolor"
+    "{{ Request::url() }}/api/produtos/delete/dolor"
 );
 
 const headers = {
@@ -1127,7 +1127,7 @@ fetch(url, {
                 <blockquote>Example request:</blockquote>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/foto/delete/all/et"
+    "{{ Request::url() }}/api/foto/delete/all/et"
 );
 
 const headers = {
@@ -1188,7 +1188,7 @@ fetch(url, {
                 <blockquote>Example request:</blockquote>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/foto/delete/magni/deleniti"
+    "{{ Request::url() }}/api/foto/delete/magni/deleniti"
 );
 
 const headers = {
@@ -1254,7 +1254,7 @@ fetch(url, {
                 <blockquote>Example request:</blockquote>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/usuarioToken?email=sam@email.com&senha=passw"
+    "{{ Request::url() }}/api/usuarioToken?email=sam@email.com&senha=passw"
 );
 
 const headers = {
@@ -1316,7 +1316,7 @@ fetch(url, {
                 <blockquote>Example request:</blockquote>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/criarUsuario"
+    "{{ Request::url() }}/api/criarUsuario"
 );
 
 const headers = {
