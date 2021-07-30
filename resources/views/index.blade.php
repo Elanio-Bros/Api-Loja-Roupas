@@ -42,8 +42,8 @@
         </ul>
 
         <ul class="toc-footer" id="toc-footer">
-            <li><a href="../docs/collection.json">View Postman collection</a></li>
-            <li><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+            {{-- <li><a href="../docs/collection.json">View Postman collection</a></li> ajustar depois --}}
+            {{-- <li><a href="../docs/openapi.yaml">View OpenAPI spec</a></li> ajustar depois --}}
             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
         </ul>
         <ul class="toc-footer" id="last-updated">
@@ -64,8 +64,9 @@
             </blockquote>
             <pre><code class="language-yaml">http://localhost</code></pre>
 
-            <h1>Authenticating requests</h1>
-            <p>This API is not authenticated.</p>
+            <h1>Authentication</h1>
+            <p>Some endpoints will need to use the generated user's token, and it must always be sent by the request
+                header</p>
 
             <h1 id="endpoints">Endpoints</h1>
 
@@ -213,7 +214,7 @@ const headers = {
 };
 
 let body = {
-    "nome":Sam,
+    "nome":"Sam",
     "senha": "passw",
     "email": "sam@email.com"
 }
@@ -299,7 +300,7 @@ const headers = {
 };
 
 let body = {
-    "senha":pass
+    "senha":pass,
 }
 
 fetch(url, {
@@ -639,7 +640,7 @@ fetch(url, {
                     <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
                         hidden>
                     <br>
-                    <b><code>quantidade_produtos</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <b><code>quantidade_produtos</code></b>&nbsp;&nbsp;<small>number</small> &nbsp;
                     <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
                         hidden>
                     <br>
@@ -881,7 +882,7 @@ fetch(url, {
                 <blockquote>Example request:</blockquote>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/produtos/et"
+    "http://localhost/api/produtos/1"
 );
 
 const headers = {
@@ -889,6 +890,15 @@ const headers = {
     "Accept": "application/json",
     "token": "api_token",
 };
+
+let body ={
+    "categorio":Camisa,
+    "nome":Camisa Manga Longa,
+    "preço":20.00,
+    "confecção":Malha,
+    "tamanho":M,
+    "quantidade_produtos":10 
+}
 
 fetch(url, {
     method: "PUT",
@@ -919,11 +929,39 @@ fetch(url, {
                     <small class="badge badge-darkblue">PUT</small>
                     <b><code>api/produtos/{idProduto}</code></b>
                 </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                <h4 class="fancy-heading-panel"><b>URL Parameters <i style="color: green">(required)</i></b></h4>
                 <p>
-                    <b><code>idProduto</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <b><code>idProduto</code></b>&nbsp;&nbsp;<small>number</small> &nbsp;
                     <input type="text" name="idProduto" data-endpoint="PUTapi-produtos--idProduto-" data-component="url"
                         required hidden>
+                    <br>
+                </p>
+
+                <h4 class="fancy-heading-panel"><b>Body Parameters <i style="color: green">(required)</i></b></h4>
+                <p>
+                    <b><code>categorio</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
+                        hidden>
+                    <br>
+                    <b><code>nome</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
+                        hidden>
+                    <br>
+                    <b><code>preço</code></b>&nbsp;&nbsp;<small>float</small> &nbsp;
+                    <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
+                        hidden>
+                    <br>
+                    <b><code>confecção</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
+                        hidden>
+                    <br>
+                    <b><code>tamanho</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
+                        hidden>
+                    <br>
+                    <b><code>quantidade_produtos</code></b>&nbsp;&nbsp;<small>number</small> &nbsp;
+                    <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
+                        hidden>
                     <br>
                 </p>
             </form>
@@ -939,7 +977,7 @@ fetch(url, {
                 <blockquote>Example request:</blockquote>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/produtos/in"
+    "http://localhost/api/produtos/1"
 );
 
 const headers = {
@@ -947,6 +985,11 @@ const headers = {
     "Accept": "application/json",
     "token": "api_token",
 };
+
+let body ={
+    "nome":Camisa Polo,
+    "preço":15.00,
+}
 
 fetch(url, {
     method: "PATCH",
@@ -977,11 +1020,38 @@ fetch(url, {
                     <small class="badge badge-purple">PATCH</small>
                     <b><code>api/produtos/{idProduto}</code></b>
                 </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                <h4 class="fancy-heading-panel"><b>URL Parameters <i style="color: green">(required)</i></b></h4>
                 <p>
-                    <b><code>idProduto</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <b><code>idProduto</code></b>&nbsp;&nbsp;<small>number</small> &nbsp;
                     <input type="text" name="idProduto" data-endpoint="PATCHapi-produtos--idProduto-"
                         data-component="url" required hidden>
+                    <br>
+                </p>
+                <h4 class="fancy-heading-panel"><b>Body Parameters <i style="color: #C9B624">(one required)</i></b></h4>
+                <p>
+                    <b><code>categorio</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
+                        hidden>
+                    <br>
+                    <b><code>nome</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
+                        hidden>
+                    <br>
+                    <b><code>preço</code></b>&nbsp;&nbsp;<small>float</small> &nbsp;
+                    <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
+                        hidden>
+                    <br>
+                    <b><code>confecção</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
+                        hidden>
+                    <br>
+                    <b><code>tamanho</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
+                        hidden>
+                    <br>
+                    <b><code>quantidade_produtos</code></b>&nbsp;&nbsp;<small>number</small> &nbsp;
+                    <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
+                        hidden>
                     <br>
                 </p>
             </form>
@@ -1037,9 +1107,9 @@ fetch(url, {
                     <small class="badge badge-red">DELETE</small>
                     <b><code>api/produtos/delete/{idProduto}</code></b>
                 </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                <h4 class="fancy-heading-panel"><b>URL Parameters <i style="color: green">(required)</i></b></h4>
                 <p>
-                    <b><code>idProduto</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <b><code>idProduto</code></b>&nbsp;&nbsp;<small>number</small> &nbsp;
                     <input type="text" name="idProduto" data-endpoint="DELETEapi-produtos-delete--idProduto-"
                         data-component="url" required hidden>
                     <br>
@@ -1097,9 +1167,9 @@ fetch(url, {
                     <small class="badge badge-red">DELETE</small>
                     <b><code>api/foto/delete/all/{idProduto}</code></b>
                 </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                <h4 class="fancy-heading-panel"><b>URL Parameters <i style="color: green">(required)</i></b></h4>
                 <p>
-                    <b><code>idProduto</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <b><code>idProduto</code></b>&nbsp;&nbsp;<small>number</small> &nbsp;
                     <input type="text" name="idProduto" data-endpoint="DELETEapi-foto-delete-all--idProduto-"
                         data-component="url" required hidden>
                     <br>
@@ -1158,15 +1228,15 @@ fetch(url, {
                     <small class="badge badge-red">DELETE</small>
                     <b><code>api/foto/delete/{idProduto}/{idFoto}</code></b>
                 </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                <h4 class="fancy-heading-panel"><b>URL Parameters <i style="color: green">(required)</i></b></h4>
                 <p>
-                    <b><code>idProduto</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <b><code>idProduto</code></b>&nbsp;&nbsp;<small>number</small> &nbsp;
                     <input type="text" name="idProduto" data-endpoint="DELETEapi-foto-delete--idProduto---idFoto-"
                         data-component="url" required hidden>
                     <br>
                 </p>
                 <p>
-                    <b><code>idFoto</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <b><code>idFoto</code></b>&nbsp;&nbsp;<small>number</small> &nbsp;
                     <input type="text" name="idFoto" data-endpoint="DELETEapi-foto-delete--idProduto---idFoto-"
                         data-component="url" required hidden>
                     <br>
@@ -1184,7 +1254,7 @@ fetch(url, {
                 <blockquote>Example request:</blockquote>
 
                 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/usuarioToken?email=email_usuario&senha=senha_usuario"
+    "http://localhost/api/usuarioToken?email=sam@email.com&senha=passw"
 );
 
 const headers = {
@@ -1220,9 +1290,9 @@ fetch(url, {
                     <small class="badge badge-green">GET</small>
                     <b><code>api/usuarioToken</code></b>
                 </p>
-                <h4 class="fancy-heading-panel"><b>Url Parameters</b></h4>
+                <h4 class="fancy-heading-panel"><b>Url Parameters <i style="color: green">(required)</i></b></h4>
                 <p>
-                    <b><code>email</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <b><code>email</code></b>&nbsp;&nbsp;<small>email</small> &nbsp;
                     <input type="text" name="nome" data-endpoint="PUTapi-usuarios--idUser-" data-component="body"
                         required hidden>
                     <br>
@@ -1255,9 +1325,9 @@ const headers = {
 };
 
 let body = {
-    "nome": "sunt",
-    "senha": "et",
-    "email": "lionel.kutch@example.org"
+    "nome":"Sam",
+    "senha": "passw",
+    "email": "sam@email.com"
 }
 
 fetch(url, {
@@ -1289,9 +1359,9 @@ fetch(url, {
                     <small class="badge badge-black">POST</small>
                     <b><code>api/criarUsuario</code></b>
                 </p>
-                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+                <h4 class="fancy-heading-panel"><b>Body Parameters <i style="color: green">(required)</i></b></h4>
                 <p>
-                    <b><code>nome</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <b><code>nome</code></b>&nbsp;&nbsp;<small>string </small> &nbsp;
                     <input type="text" name="nome" data-endpoint="POSTapi-criarUsuario" data-component="body" required
                         hidden>
                     <br>
@@ -1303,7 +1373,7 @@ fetch(url, {
                     <br>
                 </p>
                 <p>
-                    <b><code>email</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                    <b><code>email</code></b>&nbsp;&nbsp;<small>email</small> &nbsp;
                     <input type="text" name="email" data-endpoint="POSTapi-criarUsuario" data-component="body" required
                         hidden>
                     <br>
