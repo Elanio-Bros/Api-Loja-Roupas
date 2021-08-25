@@ -1,4 +1,3 @@
-# Api-Rest-Vesti
 Primeiro crie um arquivo .env [`exemplo do arquivo env`](https://github.com/Elanio-Bros/Api-Rest-Vesti/blob/main/.env.example) os requisitos para mudança são:
 1. DB_HOST
 2. DB_PORT
